@@ -23,6 +23,7 @@
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#repositorio" class="nav-link">Repositorio</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="Paneles.html" class="nav-link login-button">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -120,19 +121,37 @@
             </div>
             <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0;">
                 <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="carlos">
-                    <span class="role-tag">Director de Investigación</span>
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=85" alt="Dr. Carlos Eduardo Ramos">
+                        <span class="availability-badge" aria-label="Disponible">●</span>
+                    </div>
                     <h3>Dr. Carlos Eduardo Ramos</h3>
-                    <p>Especialista en Agroindustria y Gestión de la Calidad del Café.</p>
+                    <p class="investigator-role">Director de Investigación</p>
+                    <span class="specialty-tag">Agroindustria</span>
+                    <div class="investigator-stats"><span><strong>18</strong>Publicaciones</span><span><strong>6</strong>Proyectos</span></div>
+                    <span class="profile-button">↗ &nbsp; Ver Perfil</span>
                 </div>
                 <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="maria">
-                    <span class="role-tag">Investigadora Principal</span>
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=85" alt="Dra. María Fernanda Gómez">
+                        <span class="availability-badge" aria-label="Disponible">●</span>
+                    </div>
                     <h3>Dra. María Fernanda Gómez</h3>
-                    <p>Líder en procesos de fermentación y perfiles sensoriales.</p>
+                    <p class="investigator-role">Investigadora Principal</p>
+                    <span class="specialty-tag">Fermentación</span>
+                    <div class="investigator-stats"><span><strong>14</strong>Publicaciones</span><span><strong>5</strong>Proyectos</span></div>
+                    <span class="profile-button">↗ &nbsp; Ver Perfil</span>
                 </div>
                 <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="javier">
-                    <span class="role-tag">Coordinador de Laboratorio</span>
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&q=85" alt="Ing. Javier Alejandro Silva">
+                        <span class="availability-badge" aria-label="Disponible">●</span>
+                    </div>
                     <h3>Ing. Javier Alejandro Silva</h3>
-                    <p>Encargado de análisis físico-químicos y control de calidad.</p>
+                    <p class="investigator-role">Coordinador de Laboratorio</p>
+                    <span class="specialty-tag">Calidad de Café</span>
+                    <div class="investigator-stats"><span><strong>12</strong>Publicaciones</span><span><strong>4</strong>Proyectos</span></div>
+                    <span class="profile-button">↗ &nbsp; Ver Perfil</span>
                 </div>
             </div>
         </section>
@@ -181,17 +200,41 @@
             <div class="section-header center-text">
                 <span class="eyebrow-text">Comunidad</span>
                 <h2>Impacto en los Productores</h2>
+                <p>Conoce algunas experiencias de quienes han trabajado junto a CESURCAFÉ.</p>
             </div>
-            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0;">
-                <div class="testimonial-card">
-                    <span class="quote-icon">“</span>
-                    <p>El apoyo de CESURCAFÉ nos permitió mejorar el perfil de taza de nuestra asociación y acceder a mercados de especialidad.</p>
-                    <small>— Asociación de Caficultores del Sur</small>
-                </div>
-                <div class="testimonial-card">
-                    <span class="quote-icon">“</span>
-                    <p>Las capacitaciones en procesos de postcosecha transformaron la calidad de nuestra producción finca a finca.</p>
-                    <small>— Productor Local</small>
+            <div class="drag-carousel-container">
+                <div class="custom-cursor" id="customCursor" aria-hidden="true">↔<span>Arrastra</span></div>
+                <div class="slider-track" id="sliderTrack" tabindex="0" aria-label="Testimonios de productores">
+                    <article class="slide-card">
+                        <div class="card-preview">
+                            <img src="https://images.unsplash.com/photo-1523742810-7d962eae3f47?auto=format&fit=crop&w=900&q=85" alt="Productor revisando una planta de café">
+                            <span class="preview-label">Experiencia destacada</span>
+                        </div>
+                        <div class="card-info">
+                            <h3><span class="arrow">↘</span> Asociación de Caficultores del Sur</h3>
+                            <p>El apoyo de CESURCAFÉ nos permitió mejorar el perfil de taza de nuestra asociación y acceder a mercados de especialidad.</p>
+                        </div>
+                    </article>
+                    <article class="slide-card dark-variant">
+                        <div class="card-preview">
+                            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=85" alt="Café preparado durante una capacitación">
+                            <span class="preview-label">Formación</span>
+                        </div>
+                        <div class="card-info">
+                            <h3><span class="arrow">↘</span> Productores del Huila</h3>
+                            <p>Las capacitaciones en procesos de postcosecha transformaron la calidad de nuestra producción finca a finca.</p>
+                        </div>
+                    </article>
+                    <article class="slide-card">
+                        <div class="card-preview">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Taza de café de especialidad">
+                            <span class="preview-label">Calidad de taza</span>
+                        </div>
+                        <div class="card-info">
+                            <h3><span class="arrow">↘</span> Fincas aliadas</h3>
+                            <p>El acompañamiento técnico nos ayudó a documentar cada proceso y presentar nuestro café con mayor confianza.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -311,6 +354,35 @@
         dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
         setInterval(() => showSlide(currentSlide + 1), 5000);
 
+        const carouselContainer = document.querySelector('.drag-carousel-container');
+        const sliderTrack = document.querySelector('#sliderTrack');
+        const customCursor = document.querySelector('#customCursor');
+        let isDragging = false;
+        let dragStartX = 0;
+        let initialScrollLeft = 0;
+
+        carouselContainer.addEventListener('mousemove', (event) => {
+            const bounds = carouselContainer.getBoundingClientRect();
+            customCursor.style.left = `${event.clientX - bounds.left}px`;
+            customCursor.style.top = `${event.clientY - bounds.top}px`;
+        });
+        sliderTrack.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            sliderTrack.classList.add('is-dragging');
+            dragStartX = event.pageX - sliderTrack.offsetLeft;
+            initialScrollLeft = sliderTrack.scrollLeft;
+        });
+        ['mouseleave', 'mouseup'].forEach((eventName) => sliderTrack.addEventListener(eventName, () => {
+            isDragging = false;
+            sliderTrack.classList.remove('is-dragging');
+        }));
+        sliderTrack.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+            event.preventDefault();
+            const currentX = event.pageX - sliderTrack.offsetLeft;
+            sliderTrack.scrollLeft = initialScrollLeft - (currentX - dragStartX) * 1.5;
+        });
+
         const modal = document.querySelector('#card-modal');
         const modalKicker = document.querySelector('#modal-kicker');
         const modalTitle = document.querySelector('#modal-title');
@@ -360,6 +432,7 @@
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !modal.hidden) closeModal();
         });
+
     </script>
 
 </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CESURCAFÉ - Paneles</title>
+	<link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+	<header class="panel-header">
+		<a href="index.html" class="logo"><span class="logo-mark">■</span><span class="logo-text">CESURCAFÉ</span></a>
+		<nav class="panel-switcher" aria-label="Cambiar panel">
+			<a class="panel-switch active" href="#panel-usuario">Panel Usuario</a>
+			<a class="panel-switch" href="#panel-admin">Panel Admin</a>
+			<a class="panel-public-link" href="index.html">Sitio público</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="panel-usuario" class="user-panel">
+			<aside class="user-sidebar">
+				<div class="user-brand"><span class="user-brand-mark">⌁</span><span><strong>CESURCAFÉ</strong><small>PANEL DE USUARIO</small></span></div>
+				<div class="user-profile"><span class="user-avatar">JV</span><span><strong>Jorge E. Vargas</strong><small>Caficultor · Pitalito</small></span></div>
+				<nav class="user-nav" aria-label="Navegación del panel">
+					<button class="user-nav-item active" type="button" data-user-view="new-query">＋ <span>Nueva Consulta</span></button>
+					<button class="user-nav-item" type="button" data-user-view="my-queries">▣ <span>Mis Consultas</span></button>
+					<button class="user-nav-item" type="button" data-user-view="history">◷ <span>Historial de Respuestas</span></button>
+				</nav>
+				<a class="user-exit" href="index.html">↪ &nbsp; Salir al sitio</a>
+			</aside>
+			<div class="user-main">
+				<header class="user-topbar"><div><h2 id="user-view-title">Nueva Consulta Técnica</h2><p id="user-view-subtitle">Complete el formulario para radicar su consulta al equipo científico</p></div><button class="notification-button" type="button" aria-label="Notificaciones">♧</button></header>
+				<div class="user-view active" id="new-query"><div class="query-card"><div class="query-steps"><span class="query-step active"><b>1</b> Identificación</span><i>›</i><span class="query-step"><b>2</b> Tipo de consulta</span><i>›</i><span class="query-step"><b>3</b> Detalles</span></div><form class="query-form"><label for="user-type">¿Cómo te identificas?</label><select id="user-type" required><option value="">Seleccionar tipo de usuario...</option><option>Caficultor</option><option>Estudiante</option><option>Empresa</option><option>Investigador</option></select><p class="form-hint">Seleccione su tipo de usuario para continuar</p><button class="query-next" type="submit">Continuar</button></form></div></div>
+				<div class="user-view" id="my-queries"><div class="query-list"><article class="query-item"><span class="query-icon">▣</span><span><small>CON-2026-082</small><strong>Análisis de Suelos</strong><em>▣ 15 Jun 2026</em></span><b class="status-pill">RESPONDIDA</b></article><article class="query-item"><span class="query-icon">▣</span><span><small>CON-2026-071</small><strong>Plagas</strong><em>▣ 2 Jun 2026</em></span><b class="status-pill">RESPONDIDA</b></article></div></div>
+				<div class="user-view" id="history"><div class="history-list"><article class="history-item"><div class="history-heading"><span>CON-2026-082 &nbsp;·&nbsp; Análisis de Suelos</span><small>▣ 18 Jun 2026</small></div><div class="response-box"><small>Respuesta del investigador</small><p>Se detectó deficiencia de Boro y Zinc. Se recomienda aplicación foliar de micronutrientes y ajuste de pH a 6.2 con encalamiento.</p></div><small class="respondent">♙ &nbsp; Dra. Laura Torres · CESURCAFÉ</small></article><article class="history-item"><div class="history-heading"><span>CON-2026-071 &nbsp;·&nbsp; Plagas</span><small>▣ 5 Jun 2026</small></div><div class="response-box"><small>Respuesta del investigador</small><p>Presencia confirmada de broca (H. hampei) al 8%. Se recomienda re-pasos y aplicación de B. bassiana en dosis de 5×10<sup>12</sup> conidios/ha.</p></div><small class="respondent">♙ &nbsp; Dr. Nelson Rodríguez · CESURCAFÉ</small></article></div></div>
+			</div>
+		</section>
+
+		<section id="panel-admin" class="admin-panel">
+			<aside class="admin-sidebar">
+				<div class="admin-brand"><span class="admin-brand-mark">⌁</span><span><strong>CESURCAFÉ</strong><small>PANEL ADMIN</small></span></div>
+				<div class="admin-profile"><span class="admin-avatar">NR</span><span><strong>Dr. Nelson Rodríguez</strong><small>◉ Administrador</small></span></div>
+				<nav class="admin-nav" aria-label="Navegación administrativa"><button class="admin-nav-item active" type="button" data-admin-view="admin-dashboard">▥ <span>Dashboard</span></button><button class="admin-nav-item" type="button" data-admin-view="admin-inbox">▱ <span>Bandeja de Consultas</span></button><button class="admin-nav-item" type="button" data-admin-view="admin-research">▣ <span>Investigaciones</span></button><button class="admin-nav-item" type="button" data-admin-view="admin-users">♧ <span>Usuarios</span></button><button class="admin-nav-item" type="button" data-admin-view="admin-settings">⚙ <span>Ajustes</span></button></nav>
+				<a class="admin-exit" href="index.html">◎ &nbsp; Ver sitio público</a>
+			</aside>
+			<div class="admin-main">
+				<header class="admin-topbar"><div><h2 id="admin-view-title">Dashboard General</h2><p id="admin-view-subtitle">Martes, 24 de junio de 2026 · CESURCAFÉ</p></div><div class="admin-actions"><button type="button" aria-label="Notificaciones">♧</button><button type="button">⇩ &nbsp; Exportar</button></div></header>
+				<div class="admin-view active" id="admin-dashboard"><div class="metric-grid"><article class="metric-card metric-pending"><span>◷</span><strong>23</strong><p>Consultas Pendientes</p><small>+5 hoy</small></article><article class="metric-card metric-drafts"><span>▤</span><strong>4</strong><p>Borradores por Aprobar</p><small>2 vencen esta semana</small></article><article class="metric-card metric-users"><span>♧</span><strong>148</strong><p>Usuarios Activos</p><small>+12 este mes</small></article><article class="metric-card metric-pubs"><span>▢</span><strong>8</strong><p>Publicaciones 2026</p><small>Meta: 18</small></article></div><div class="admin-chart-grid"><article class="admin-chart"><h3>Consultas por Municipio</h3><p>Distribución geográfica del Huila</p><div class="donut-chart"><div></div></div><ul class="chart-legend"><li><i class="legend-pitalito"></i>Pitalito <b>38%</b></li><li><i class="legend-garzon"></i>Garzón <b>27%</b></li><li><i class="legend-neiva"></i>Neiva <b>19%</b></li><li><i class="legend-acevedo"></i>Acevedo <b>10%</b></li><li><i class="legend-other"></i>Otros <b>6%</b></li></ul></article><article class="admin-chart"><h3>Producción Científica</h3><p>Publicaciones por año y tipo</p><div class="bar-chart"><span style="--bar:42%"></span><span style="--bar:58%"></span><span style="--bar:76%"></span><span style="--bar:88%"></span><span style="--bar:100%"></span><span style="--bar:42%"></span></div><div class="bar-years"><small>2021</small><small>2022</small><small>2023</small><small>2024</small><small>2025</small><small>2026</small></div></article></div><section class="admin-table-card"><div class="table-heading"><div><h3>Borradores de Investigación Pendientes</h3><p>Investigaciones enviadas por los profesores que requieren aprobación</p></div><button type="button">⚱ Filtrar</button></div><div class="admin-table-scroll"><table><thead><tr><th>ID</th><th>TÍTULO</th><th>INVESTIGADOR</th><th>TIPO</th><th>ENVIADO</th><th>ESTADO</th></tr></thead><tbody><tr><td>INV-2026-012</td><td><strong>Impacto del cambio climático...</strong></td><td>Dra. Valentina Ospina C.</td><td><span class="table-tag">Artículo</span></td><td>20 Jun 2026</td><td><span class="table-status pending">PENDIENTE</span></td></tr><tr><td>INV-2026-011</td><td><strong>Evaluación de biofertilizantes...</strong></td><td>MSc. Andrés Felipe Muñoz</td><td><span class="table-tag">Artículo</span></td><td>17 Jun 2026</td><td><span class="table-status pending">PENDIENTE</span></td></tr><tr><td>INV-2026-010</td><td><strong>Cartilla rural: Manejo...</strong></td><td>Dra. Laura Camila Torres</td><td><span class="table-tag">Cartilla Rural</span></td><td>14 Jun 2026</td><td><span class="table-status review">EN REVISIÓN</span></td></tr></tbody></table></div></section><section class="admin-table-card"><div class="table-heading"><div><h3>Consultas Recientes de Caficultores</h3><p>Últimas solicitudes ingresadas al sistema</p></div></div><div class="admin-table-scroll"><table><thead><tr><th>RADICADO</th><th>USUARIO</th><th>MUNICIPIO</th><th>TIPO DE CONSULTA</th><th>FECHA</th><th>ESTADO</th></tr></thead><tbody><tr><td>CON-2026-087</td><td>Jorge E. Vargas</td><td>Pitalito</td><td>Análisis de Suelos</td><td>23 Jun 2026</td><td><span class="table-status pending">PENDIENTE</span></td></tr><tr><td>CON-2026-086</td><td>María L. Ríos</td><td>Garzón</td><td>Plagas</td><td>22 Jun 2026</td><td><span class="table-status review">EN ATENCIÓN</span></td></tr><tr><td>CON-2026-085</td><td>Carlos A. Perdomo</td><td>Acevedo</td><td>Catación</td><td>21 Jun 2026</td><td><span class="table-status answered">RESPONDIDA</span></td></tr></tbody></table></div></section></div>
+				<div class="admin-view admin-placeholder" id="admin-inbox"><h3>Bandeja de Consultas</h3><p>Gestiona y responde las solicitudes de los caficultores.</p></div><div class="admin-view admin-placeholder" id="admin-research"><h3>Investigaciones</h3><p>Revisa los borradores y publicaciones del centro.</p></div><div class="admin-view admin-placeholder" id="admin-users"><h3>Usuarios</h3><p>Consulta y administra los perfiles registrados.</p></div><div class="admin-view admin-placeholder" id="admin-settings"><h3>Ajustes</h3><p>Configura las preferencias del panel administrativo.</p></div>
+			</div>
+		</section>
+	</main>
+	<script>
+		const userViews = { 'new-query': ['Nueva Consulta Técnica', 'Complete el formulario para radicar su consulta al equipo científico'], 'my-queries': ['Mis Consultas', 'Estado de tus solicitudes enviadas'], history: ['Historial de Respuestas', 'Respuestas recibidas del equipo investigador'] };
+		document.querySelectorAll('.user-nav-item').forEach((item) => item.addEventListener('click', () => { const viewId = item.dataset.userView; document.querySelectorAll('.user-nav-item').forEach((navItem) => navItem.classList.remove('active')); document.querySelectorAll('.user-view').forEach((view) => view.classList.remove('active')); item.classList.add('active'); document.querySelector(`#${viewId}`).classList.add('active'); document.querySelector('#user-view-title').textContent = userViews[viewId][0]; document.querySelector('#user-view-subtitle').textContent = userViews[viewId][1]; }));
+		document.querySelector('.query-form').addEventListener('submit', (event) => { event.preventDefault(); document.querySelector('.form-hint').textContent = 'Identificación guardada. Puede continuar con su consulta.'; document.querySelector('.query-next').textContent = 'Guardado'; });
+		const adminViews = { 'admin-dashboard': ['Dashboard General', 'Martes, 24 de junio de 2026 · CESURCAFÉ'], 'admin-inbox': ['Bandeja de Consultas', 'Gestiona las solicitudes de los caficultores'], 'admin-research': ['Gestión de Investigaciones', 'Revisa y aprueba la producción científica'], 'admin-users': ['Usuarios', 'Administra los perfiles registrados en el sistema'], 'admin-settings': ['Ajustes', 'Configura las preferencias administrativas'] };
+		document.querySelectorAll('.admin-nav-item').forEach((item) => item.addEventListener('click', () => { const viewId = item.dataset.adminView; document.querySelectorAll('.admin-nav-item').forEach((navItem) => navItem.classList.remove('active')); document.querySelectorAll('.admin-view').forEach((view) => view.classList.remove('active')); item.classList.add('active'); document.querySelector(`#${viewId}`).classList.add('active'); document.querySelector('#admin-view-title').textContent = adminViews[viewId][0]; document.querySelector('#admin-view-subtitle').textContent = adminViews[viewId][1]; }));
+	</script>
+</body>
+</html>
