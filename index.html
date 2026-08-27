@@ -290,10 +290,29 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2026 CESURCAFÉ - Universidad Surcolombiana. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="#inicio" class="social-item">Inicio</a>
-                <a href="#contacto" class="social-item">Contacto</a>
+            <section class="footer-networks" aria-labelledby="footer-networks-title">
+                <h2 id="footer-networks-title" class="visually-hidden">Alianzas y Redes</h2>
+                <ul class="network-list">
+                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad de Manchester - Universidad de los Andes" data-alliance-info="Coffee from Advanced Fermentation, Engineering and Sensing. Financiación: British Council, Newton Fund Institutional.">Universidad de Manchester - Universidad de los Andes</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad Federal de Lavras" data-alliance-info="Alianza internacional para promover el intercambio de estudiantes, profesores e investigadores entre la UFAL y la USCO, a nivel de grado y posgrado.">Universidad Federal de Lavras</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="Convenio especial de cooperación N° 085" data-alliance-info="Convenio para el desarrollo de actividades de ciencia, tecnología e innovación entre el departamento del Huila y la Universidad Surcolombiana-USCO.">Convenio especial de cooperación N° 085</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="Coffee Andes SAS" data-alliance-info="Convenio para la entrega en comodato de equipos y materiales destinados a actividades de investigación, ciencia, tecnología e innovación.">Agroindustria de los Andes Colombianos - Coffee Andes SAS</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad de Ciencias Aplicadas de Zurich" data-alliance-info="Universidad de Ciencias Aplicadas de Zurich - ZHAW.">Universidad de Ciencias Aplicadas de Zurich - ZHAW</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad Estatal de Kansas" data-alliance-info="Universidad Estatal de Kansas - K-state.">Universidad Estatal de Kansas - K-state</button></li>
+                    <li><button class="alliance-button" type="button" data-alliance-title="CATIE y Universidad Politécnica de Madrid" data-alliance-info="Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) y Universidad Politécnica de Madrid. Alianza en trámite.">CATIE - Universidad Politécnica de Madrid</button></li>
+                </ul>
+                <div class="alliance-popover" id="alliance-popover" role="dialog" aria-modal="false" aria-labelledby="alliance-popover-title" hidden>
+                    <button class="alliance-popover-close" type="button" aria-label="Cerrar información">&times;</button>
+                    <h3 id="alliance-popover-title"></h3>
+                    <p id="alliance-popover-info"></p>
+                </div>
+            </section>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CESURCAFÉ - Universidad Surcolombiana. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#inicio" class="social-item">Inicio</a>
+                    <a href="#contacto" class="social-item">Contacto</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -404,6 +423,28 @@
         });
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !modal.hidden) closeModal();
+        });
+
+        const alliancePopover = document.querySelector('#alliance-popover');
+        const alliancePopoverTitle = document.querySelector('#alliance-popover-title');
+        const alliancePopoverInfo = document.querySelector('#alliance-popover-info');
+        const alliancePopoverClose = document.querySelector('.alliance-popover-close');
+
+        function closeAlliancePopover() {
+            alliancePopover.hidden = true;
+        }
+
+        document.querySelectorAll('.alliance-button').forEach((button) => {
+            button.addEventListener('click', () => {
+                alliancePopoverTitle.textContent = button.dataset.allianceTitle;
+                alliancePopoverInfo.textContent = button.dataset.allianceInfo;
+                alliancePopover.hidden = false;
+                alliancePopoverClose.focus();
+            });
+        });
+        alliancePopoverClose.addEventListener('click', closeAlliancePopover);
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !alliancePopover.hidden) closeAlliancePopover();
         });
 
     </script>

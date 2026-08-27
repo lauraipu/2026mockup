@@ -327,6 +327,21 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
 
 .footer { padding: 2rem 1.5rem; border-top: 1px solid var(--border-color); background: var(--bg-dark); color: #e8dfd6; font-family: var(--font-ui); font-size: 0.8rem; }
 .footer-container { display: flex; max-width: 1100px; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 auto; }
+.footer-networks { width: 100%; margin-bottom: 1.5rem; color: #e8dfd6; text-align: center; }
+.network-list { column-count: 3; column-gap: 1.5rem; column-rule: 1px solid var(--border-color); padding: 0; list-style: none; }
+.network-list li { break-inside: avoid; margin-bottom: 0.75rem; color: #e8dfd6; line-height: 1.65; }
+.network-list li::before { color: #d49b69; content: '- '; }
+.alliance-button { padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.2em; transition: color var(--transition), text-decoration-color var(--transition); }
+.alliance-button:hover, .alliance-button:focus-visible { color: #f0c49b; text-decoration-color: currentColor; outline: 0; }
+.alliance-popover { position: absolute; z-index: 3; left: 50%; width: min(90%, 560px); padding: 1.25rem 3rem 1.25rem 1.25rem; border: 1px solid #d49b69; border-radius: 6px; background: #fffdf9; color: var(--text-primary); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3); text-align: left; transform: translate(-50%, -105%); }
+.footer-networks { position: relative; }
+.alliance-popover h3 { margin-bottom: 0.35rem; font-family: var(--font-ui); font-size: 0.95rem; }
+.alliance-popover p { color: var(--text-secondary); line-height: 1.5; }
+.alliance-popover-close { position: absolute; top: 0.55rem; right: 0.55rem; display: grid; width: 1.8rem; height: 1.8rem; place-items: center; border: 0; border-radius: 50%; background: var(--bg-soft); color: var(--text-primary); cursor: pointer; font-size: 1.2rem; }
+.alliance-popover-close:hover { background: var(--border-color); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; clip-path: inset(50%); }
+.footer-bottom { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 1rem; }
+.footer-bottom p { margin: 0; }
 .social-links { display: flex; gap: 1rem; }
 .social-item { color: #e8c7a6; text-decoration: none; }
 .social-item:hover { text-decoration: underline; }
@@ -352,6 +367,8 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
     .card-text-block h3 { font-size: 1.6rem; }
     .card-media-block { min-height: 170px; }
     .footer-container { align-items: flex-start; flex-direction: column; }
+    .footer-bottom { align-items: flex-start; flex-direction: column; }
+    .network-list { column-count: 1; column-rule: 0; }
     .drag-carousel-container { margin-top: 1.5rem; cursor: default; }
     .custom-cursor { display: none; }
     .slider-track { gap: 1rem; padding-right: 1rem; }
