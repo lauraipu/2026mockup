@@ -43,8 +43,25 @@
                     <h2>Conoce Nuestras Instalaciones</h2>
                     <p>Explora el recorrido virtual de los laboratorios y áreas de investigación de CESURCAFÉ.</p>
                 </div>
-                <div class="virtual-tour-wrapper">
-                    <iframe src="https://kuula.co/share/collection/7Kks9?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1" title="Recorrido Virtual CESURCAFÉ" allowfullscreen></iframe>
+                <div class="virtual-tour-wrapper image-carousel" aria-label="Galería de instalaciones de CESURCAFÉ">
+                    <div class="carousel-track">
+                        <figure class="carousel-slide active">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=85" alt="Granos de café en un laboratorio">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1400&q=85" alt="Preparación de café en las instalaciones">
+                        </figure>
+                        <figure class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1400&q=85" alt="Equipo para análisis y preparación de café">
+                        </figure>
+                    </div>
+                    <button class="carousel-control carousel-control-prev" type="button" aria-label="Imagen anterior">&#10094;</button>
+                    <button class="carousel-control carousel-control-next" type="button" aria-label="Siguiente imagen">&#10095;</button>
+                    <div class="carousel-dots" aria-label="Seleccionar imagen">
+                        <button class="carousel-dot active" type="button" aria-label="Ver imagen 1"></button>
+                        <button class="carousel-dot" type="button" aria-label="Ver imagen 2"></button>
+                        <button class="carousel-dot" type="button" aria-label="Ver imagen 3"></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,17 +119,17 @@
                 <p>Docentes, científicos y profesionales dedicados al desarrollo del sector cafetero.</p>
             </div>
             <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0;">
-                <div class="investigator-card">
+                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="carlos">
                     <span class="role-tag">Director de Investigación</span>
                     <h3>Dr. Carlos Eduardo Ramos</h3>
                     <p>Especialista en Agroindustria y Gestión de la Calidad del Café.</p>
                 </div>
-                <div class="investigator-card">
+                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="maria">
                     <span class="role-tag">Investigadora Principal</span>
                     <h3>Dra. María Fernanda Gómez</h3>
                     <p>Líder en procesos de fermentación y perfiles sensoriales.</p>
                 </div>
-                <div class="investigator-card">
+                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="javier">
                     <span class="role-tag">Coordinador de Laboratorio</span>
                     <h3>Ing. Javier Alejandro Silva</h3>
                     <p>Encargado de análisis físico-químicos y control de calidad.</p>
@@ -189,7 +206,7 @@
             </div>
 
             <div class="repo-grid">
-                <article class="repo-card">
+                <article class="repo-card card-trigger" role="button" tabindex="0" data-modal="fermentacion">
                     <div class="card-media">
                         <span class="tag tag-area">Calidad</span>
                         <span class="tag tag-type">Artículo</span>
@@ -202,7 +219,7 @@
                     </div>
                 </article>
 
-                <article class="repo-card">
+                <article class="repo-card card-trigger" role="button" tabindex="0" data-modal="sostenibilidad">
                     <div class="card-media">
                         <span class="tag tag-area">Sostenibilidad</span>
                         <span class="tag tag-type">Cartilla Rural</span>
@@ -215,7 +232,7 @@
                     </div>
                 </article>
 
-                <article class="repo-card">
+                <article class="repo-card card-trigger" role="button" tabindex="0" data-modal="microbiologia">
                     <div class="card-media">
                         <span class="tag tag-area">Biotecnología</span>
                         <span class="tag tag-type">Libro</span>
@@ -264,6 +281,86 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="card-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" hidden>
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Cerrar ventana">&times;</button>
+            <p class="modal-kicker" id="modal-kicker"></p>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <p class="modal-description" id="modal-description"></p>
+            <a class="modal-link" id="modal-link" href="https://www.usco.edu.co/" target="_blank" rel="noopener">Visitar página</a>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            slides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === currentSlide));
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === currentSlide);
+                dot.setAttribute('aria-current', dotIndex === currentSlide ? 'true' : 'false');
+            });
+        }
+
+        document.querySelector('.carousel-control-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+        document.querySelector('.carousel-control-next').addEventListener('click', () => showSlide(currentSlide + 1));
+        dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+
+        const modal = document.querySelector('#card-modal');
+        const modalKicker = document.querySelector('#modal-kicker');
+        const modalTitle = document.querySelector('#modal-title');
+        const modalDescription = document.querySelector('#modal-description');
+        const modalLink = document.querySelector('#modal-link');
+        const modalClose = document.querySelector('.modal-close');
+        const cardDetails = {
+            carlos: { kicker: 'Director de Investigación', title: 'Dr. Carlos Eduardo Ramos', description: 'Especialista en agroindustria y gestión de la calidad del café. Coordina las líneas de investigación y el trabajo con productores, laboratorios y aliados estratégicos.', link: false },
+            maria: { kicker: 'Investigadora Principal', title: 'Dra. María Fernanda Gómez', description: 'Lidera proyectos sobre fermentación controlada, perfiles sensoriales y valorización de subproductos para fortalecer la innovación en la cadena cafetera.', link: false },
+            javier: { kicker: 'Coordinador de Laboratorio', title: 'Ing. Javier Alejandro Silva', description: 'Está a cargo de los análisis físico-químicos, el control de calidad y el acompañamiento técnico de las prácticas realizadas en los laboratorios.', link: false },
+            fermentacion: { kicker: 'Artículo | Calidad', title: 'Impacto de la Fermentación Prolongada en Cafés Especiales', description: 'Estudio sobre las variaciones químicas y sensoriales durante la fermentación anaeróbica y su efecto en la construcción de perfiles de taza.', link: true },
+            sostenibilidad: { kicker: 'Cartilla Rural | Sostenibilidad', title: 'Guía de Manejo Sostenible de Subproductos del Café', description: 'Manual práctico para transformar el mucílago y la pulpa en abonos orgánicos, reduciendo residuos y aprovechando mejor los recursos de la finca.', link: true },
+            microbiologia: { kicker: 'Libro | Biotecnología', title: 'Microbiología Aplicada a la Caficultura Moderna', description: 'Compendio sobre microorganismos nativos y su papel en la diferenciación de perfiles de taza y en el desarrollo de procesos innovadores.', link: true }
+        };
+
+        function openModal(cardId) {
+            const detail = cardDetails[cardId];
+            modalKicker.textContent = detail.kicker;
+            modalTitle.textContent = detail.title;
+            modalDescription.textContent = detail.description;
+            modalLink.hidden = !detail.link;
+            modal.hidden = false;
+            modal.classList.add('is-open');
+            document.body.classList.add('modal-open');
+            modalClose.focus();
+        }
+
+        function closeModal() {
+            modal.classList.remove('is-open');
+            modal.hidden = true;
+            document.body.classList.remove('modal-open');
+        }
+
+        document.querySelectorAll('.card-trigger').forEach((card) => {
+            card.addEventListener('click', () => openModal(card.dataset.modal));
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openModal(card.dataset.modal);
+                }
+            });
+        });
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.hidden) closeModal();
+        });
+    </script>
 
 </body>
 </html>
