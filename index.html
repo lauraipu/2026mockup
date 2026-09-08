@@ -6,6 +6,7 @@
     <meta name="description" content="CESURCAFÉ - Centro Surcolombiano de Investigación en Café, Universidad Surcolombiana. Investigación, servicios científicos y acompañamiento a la caficultura del Huila.">
     <title>CESURCAFÉ - Centro de Estudios e Investigaciones del Café</title>
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
 
@@ -38,7 +39,7 @@
                 <li><a href="#repositorio" class="nav-link">Repositorio</a></li>
                 <li><a href="#alianzas" class="nav-link">Alianzas</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                <li><a href="Paneles.html" class="nav-link login-button">Login</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -182,89 +183,168 @@
                 </div>
             </div>
         </section>
+<!-- TESTIMONIOS (CARRUSEL SPLIDE) -->
+<section class="testimonials-section section-padding" aria-label="Impacto en los Productores">
+    <div class="section-header center-text">
+        <span class="eyebrow-text">Comunidad</span>
+        <h2>Impacto en los Productores</h2>
+        <p>Conoce algunas experiencias de quienes han trabajado junto a CESURCAFÉ.</p>
+    </div>
 
-        <!-- TESTIMONIOS -->
-        <section class="testimonials-section">
-            <div class="section-header center-text">
-                <span class="eyebrow-text">Comunidad</span>
-                <h2>Impacto en los Productores</h2>
-                <p>Conoce algunas experiencias de quienes han trabajado junto a CESURCAFÉ.</p>
-            </div>
-            <div class="drag-carousel-container">
-                <div class="custom-cursor" id="customCursor" aria-hidden="true">↔<span>Arrastra</span></div>
-                <div class="slider-track" id="sliderTrack" tabindex="0" aria-label="Testimonios de productores">
+    <!-- Estructura de Splide -->
+    <div id="testimonials-carousel" class="splide" aria-label="Carrusel de testimonios de productores">
+        
+        <!-- Botón de Pausa Accesible -->
+        <div class="splide__toggle-container">
+            <button class="splide__toggle" type="button" aria-label="Pausar carrusel">
+                <span class="splide__toggle__play">▶ Reanudar</span>
+                <span class="splide__toggle__pause">❚❚ Pausar</span>
+            </button>
+        </div>
+
+        <div class="splide__track">
+            <ul class="splide__list">
+
+                <!-- Tarjeta 1 -->
+                <li class="splide__slide">
                     <article class="slide-card">
                         <div class="card-preview">
-                            <img src="https://images.unsplash.com/photo-1523742810-7d962eae3f47?auto=format&fit=crop&w=900&q=85" alt="Productor revisando una planta de café">
+                            <img src="https://picsum.photos/id/1060/800/600" alt="Productor revisando café">
                             <span class="preview-label">Experiencia destacada</span>
                         </div>
                         <div class="card-info">
-                            <h3><span class="arrow">↘</span> Asociación de Caficultores del Sur</h3>
+                            <h3><span class="arrow" aria-hidden="true">↘</span> Asociación de Caficultores del Sur</h3>
                             <p>El apoyo de CESURCAFÉ nos permitió mejorar el perfil de taza de nuestra asociación y acceder a mercados de especialidad.</p>
                         </div>
                     </article>
+                </li>
+
+                <!-- Tarjeta 2 -->
+                <li class="splide__slide">
                     <article class="slide-card dark-variant">
                         <div class="card-preview">
-                            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=85" alt="Café preparado durante una capacitación">
+                            <img src="https://picsum.photos/id/425/800/600" alt="Capacitación en preparación de café">
                             <span class="preview-label">Formación</span>
                         </div>
                         <div class="card-info">
-                            <h3><span class="arrow">↘</span> Productores del Huila</h3>
+                            <h3><span class="arrow" aria-hidden="true">↘</span> Productores del Huila</h3>
                             <p>Las capacitaciones en procesos de postcosecha transformaron la calidad de nuestra producción finca a finca.</p>
                         </div>
                     </article>
+                </li>
+
+                <!-- Tarjeta 3 -->
+                <li class="splide__slide">
                     <article class="slide-card">
                         <div class="card-preview">
-                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Taza de café de especialidad">
+                            <img src="https://picsum.photos/id/755/800/600" alt="Taza de café recién servida">
                             <span class="preview-label">Calidad de taza</span>
                         </div>
                         <div class="card-info">
-                            <h3><span class="arrow">↘</span> Fincas aliadas</h3>
+                            <h3><span class="arrow" aria-hidden="true">↘</span> Fincas aliadas</h3>
                             <p>El acompañamiento técnico nos ayudó a documentar cada proceso y presentar nuestro café con mayor confianza.</p>
                         </div>
                     </article>
-                </div>
-            </div>
-        </section>
+                </li>
 
-        <!-- PRÓXIMOS EVENTOS -->
-        <section id="proximos-eventos" class="events-section">
-            <div class="section-header center-text">
-                <span class="eyebrow-text">Agenda</span>
-                <h2>Próximos Eventos</h2>
-                <p>Participa en las actividades académicas y técnicas de CESURCAFÉ.</p>
-            </div>
-            <div class="events-list">
-                <article class="event-item">
-                    <time class="event-date" datetime="2026-09-12"><strong>12</strong><span>SEP<br>2026</span></time>
-                    <div class="event-details">
-                        <span class="event-type">Seminario</span>
-                        <h3>Nuevas tendencias en la calidad del café</h3>
-                        <p>Auditorio de la Universidad Surcolombiana · 8:00 a. m. - 12:00 p. m.</p>
-                    </div>
-                    <span class="event-status">Inscripciones abiertas</span>
-                </article>
-                <article class="event-item">
-                    <time class="event-date" datetime="2026-09-26"><strong>26</strong><span>SEP<br>2026</span></time>
-                    <div class="event-details">
-                        <span class="event-type">Taller práctico</span>
-                        <h3>Buenas prácticas para la poscosecha</h3>
-                        <p>Laboratorio CESURCAFÉ · 2:00 p. m. - 5:00 p. m.</p>
-                    </div>
-                    <span class="event-status">Cupos limitados</span>
-                </article>
-                <article class="event-item">
-                    <time class="event-date" datetime="2026-10-08"><strong>08</strong><span>OCT<br>2026</span></time>
-                    <div class="event-details">
-                        <span class="event-type">Encuentro académico</span>
-                        <h3>Investigación e innovación para la caficultura</h3>
-                        <p>Sede Pitalito · 9:00 a. m. - 3:00 p. m.</p>
-                    </div>
-                    <span class="event-status">Próximamente</span>
-                </article>
-            </div>
-        </section>
+                <!-- Tarjeta 4 (Agregada para que el loop de 3 en pantalla fluya mejor) -->
+                <li class="splide__slide">
+                    <article class="slide-card dark-variant">
+                        <div class="card-preview">
+                            <img src="https://picsum.photos/id/312/800/600" alt="Granos de café seleccionados">
+                            <span class="preview-label">Innovación</span>
+                        </div>
+                        <div class="card-info">
+                            <h3><span class="arrow" aria-hidden="true">↘</span> Central de Beneficio</h3>
+                            <p>Implementamos nuevas tecnologías de fermentación asistida gracias al laboratorio de investigación.</p>
+                        </div>
+                    </article>
+                </li>
 
+            </ul>
+        </div>
+    </div>
+</section>
+
+     <!-- SECCIÓN DE PRÓXIMOS EVENTOS Y AGENDA SEMANAL -->
+<section id="proximos-eventos" class="events-section section-padding">
+    <div class="section-header center-text">
+        <span class="eyebrow-text">Agenda</span>
+        <h2>Próximos Eventos</h2>
+        <p>Participa en las actividades académicas y técnicas de CESURCAFÉ.</p>
+    </div>
+
+    <!-- CALENDARIO SEMANAL (Informativo / Filtro por día) -->
+    <div class="booking-calendar agenda-calendar-container">
+        <p class="booking-subtitle">Programación del 7 al 11 de septiembre</p>
+        
+        <div class="calendar-days" role="group" aria-label="Selección de día de la semana">
+            <button type="button" class="day-btn active" aria-pressed="true">
+                <span class="day-name">LUN</span>
+                <span class="day-number">7</span>
+            </button>
+            <button type="button" class="day-btn">
+                <span class="day-name">MAR</span>
+                <span class="day-number">8</span>
+            </button>
+            <button type="button" class="day-btn disabled" disabled aria-disabled="true">
+                <span class="day-name">MIÉ</span>
+                <span class="day-number">9</span>
+            </button>
+            <button type="button" class="day-btn">
+                <span class="day-name">JUE</span>
+                <span class="day-number">10</span>
+            </button>
+            <button type="button" class="day-btn">
+                <span class="day-name">VIE</span>
+                <span class="day-number">11</span>
+            </button>
+        </div>
+        <p class="calendar-note">Los días sin programación o actividades sin cupo aparecen desactivados.</p>
+    </div>
+
+    <!-- LISTA DE EVENTOS -->
+    <div class="events-list">
+        <article class="event-item">
+            <time class="event-date" datetime="2026-09-12">
+                <strong>12</strong>
+                <span>SEP<br>2026</span>
+            </time>
+            <div class="event-details">
+                <span class="event-type">Seminario</span>
+                <h3>Nuevas tendencias en la calidad del café</h3>
+                <p>Auditorio de la Universidad Surcolombiana · 8:00 a. m. - 12:00 p. m.</p>
+            </div>
+            <span class="event-status status-open">Inscripciones abiertas</span>
+        </article>
+
+        <article class="event-item">
+            <time class="event-date" datetime="2026-09-26">
+                <strong>26</strong>
+                <span>SEP<br>2026</span>
+            </time>
+            <div class="event-details">
+                <span class="event-type">Taller práctico</span>
+                <h3>Buenas prácticas para la poscosecha</h3>
+                <p>Laboratorio CESURCAFÉ · 2:00 p. m. - 5:00 p. m.</p>
+            </div>
+            <span class="event-status status-limited">Cupos limitados</span>
+        </article>
+
+        <article class="event-item">
+            <time class="event-date" datetime="2026-10-08">
+                <strong>08</strong>
+                <span>OCT<br>2026</span>
+            </time>
+            <div class="event-details">
+                <span class="event-type">Encuentro académico</span>
+                <h3>Investigación e innovación para la caficultura</h3>
+                <p>Sede Pitalito · 9:00 a. m. - 3:00 p. m.</p>
+            </div>
+            <span class="event-status status-upcoming">Próximamente</span>
+        </article>
+    </div>
+</section>
         <!-- REPOSITORIO DE INVESTIGACIONES -->
         <section id="repositorio" class="repo-section">
             <div class="repo-header">
@@ -341,150 +421,56 @@
             </div>
         </section>
 
-    <!-- SECCIÓN DE CONTACTO Y AGENDA -->
+  <!-- SECCIÓN DE CONTACTO -->
 <section id="contacto" class="section-padding">
     <div class="section-header">
         <span class="eyebrow-text">Atención al ciudadano</span>
-        <h2>Contacto y agenda</h2>
+        <h2>Contacto</h2>
     </div>
 
     <div class="contact-layout">
-        <!-- COLUMNA IZQUIERDA: Formulario de contacto e Información Institucional -->
-        <div class="contact-left-col">
-            <div class="contact-form-card">
-                <h3>Formulario de contacto</h3>
-                <p class="form-legend-note">Los campos marcados con <span class="required-flag" aria-hidden="true">*</span> son obligatorios.</p>
-                
-                <form action="https://wa.me/" method="get" target="_blank" class="contact-form-group">
-                    <div>
-                        <label for="contact-name">Nombre completo <span class="required-flag" aria-hidden="true">*</span></label>
-                        <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo" required aria-required="true">
-                    </div>
-
-                    <div>
-                        <label for="contact-info">Correo o teléfono de contacto <span class="required-flag" aria-hidden="true">*</span></label>
-                        <input type="text" id="contact-info" name="contact" placeholder="Ej. correo@ejemplo.com o 3001234567" required aria-required="true">
-                    </div>
-
-                    <div>
-                        <label for="contact-message">Asunto, causa o mensaje <span class="required-flag" aria-hidden="true">*</span></label>
-                        <textarea id="contact-message" name="message" rows="4" placeholder="Escribe el motivo de tu consulta o PQRSD..." required aria-required="true"></textarea>
-                    </div>
-
-                    <button type="submit" class="contact-submit">Enviar mensaje</button>
-                </form>
-            </div>
-
-            <hr class="contact-divider" aria-hidden="true">
-
-            <!-- Información institucional ubicadas debajo del botón para equilibrio visual -->
-            <div class="contact-info-card">
-                <h3>Información de contacto</h3>
-                <ul class="contact-info-list">
-                    <li>
-                        <b aria-hidden="true">⌂</b> 
-                        <span><strong>Dirección:</strong> Universidad Surcolombiana, Sede Central, Avenida Pastrana Borrero - Carrera 1, Neiva, Huila</span>
-                    </li>
-                    <li>
-                        <b aria-hidden="true">☏</b> 
-                        <span><strong>Teléfono:</strong> (608) 875 4753 · Ext. 2201</span>
-                    </li>
-                    <li>
-                        <b aria-hidden="true">✉</b> 
-                        <span><strong>Correo:</strong> cesurcafe@usco.edu.co</span>
-                    </li>
-                </ul>
-
-                <div class="contact-schedule">
-                    <h4>Horario de atención presencial</h4>
-                    <table class="schedule-table">
-                        <caption class="visually-hidden">Horario de atención al público de CESURCAFÉ</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Día</th>
-                                <th scope="col">Horario</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Lunes a viernes</td>
-                                <td>8:00 a. m. - 12:00 m. y 2:00 p. m. - 6:00 p. m.</td>
-                            </tr>
-                            <tr>
-                                <td>Sábados</td>
-                                <td>8:00 a. m. - 12:00 m.</td>
-                            </tr>
-                            <tr>
-                                <td>Domingos y festivos</td>
-                                <td>Cerrado</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="pqrs-note">Para PQRSD radicadas fuera del horario de atención presencial, utilice el formulario en línea o el correo institucional; la respuesta se gestionará el siguiente día hábil.</p>
+        <!-- Formulario de contacto -->
+        <div class="contact-form-card">
+            <h3>Formulario de contacto</h3>
+            <p class="form-legend-note">Los campos marcados con <span class="required-flag" aria-hidden="true">*</span> son obligatorios.</p>
+            
+            <form action="https://wa.me/" method="get" target="_blank" class="contact-form-group">
+                <div>
+                    <label for="contact-name">Nombre completo <span class="required-flag" aria-hidden="true">*</span></label>
+                    <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo" required aria-required="true">
                 </div>
-            </div>
+
+                <div>
+                    <label for="contact-info">Correo o teléfono de contacto <span class="required-flag" aria-hidden="true">*</span></label>
+                    <input type="text" id="contact-info" name="contact" placeholder="Ej. correo@ejemplo.com o 3001234567" required aria-required="true">
+                </div>
+
+                <div>
+                    <label for="contact-message">Asunto, causa o mensaje <span class="required-flag" aria-hidden="true">*</span></label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Escribe el motivo de tu consulta o PQRSD..." required aria-required="true"></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit">Enviar mensaje</button>
+            </form>
         </div>
 
-        <!-- COLUMNA DERECHA: Agendamiento de Citas -->
-        <div class="contact-right-col">
-            <div class="booking-card">
-                <div class="booking-header">
-                    <h3>Agenda tu cita</h3>
-                    <p class="booking-subtitle">Disponibilidad del 7 al 11 de septiembre</p>
-                </div>
-
-                <!-- Selector de días de la semana -->
-                <div class="booking-calendar">
-                    <div class="calendar-days" role="group" aria-label="Selección de día de la semana">
-                        <button type="button" class="day-btn active" aria-pressed="true">
-                            <span class="day-name">LUN</span>
-                            <span class="day-number">7</span>
-                        </button>
-                        <button type="button" class="day-btn">
-                            <span class="day-name">MAR</span>
-                            <span class="day-number">8</span>
-                        </button>
-                        <button type="button" class="day-btn disabled" disabled aria-disabled="true">
-                            <span class="day-name">MIÉ</span>
-                            <span class="day-number">9</span>
-                        </button>
-                        <button type="button" class="day-btn">
-                            <span class="day-name">JUE</span>
-                            <span class="day-number">10</span>
-                        </button>
-                        <button type="button" class="day-btn">
-                            <span class="day-name">VIE</span>
-                            <span class="day-number">11</span>
-                        </button>
-                    </div>
-                    <p class="calendar-note">Solo se habilita la semana publicada. Los días sin cupo aparecen desactivados.</p>
-                </div>
-
-                <!-- Detalles del día seleccionado y opciones de cita -->
-                <div class="booking-details">
-                    <span class="section-sublabel">FECHA SELECCIONADA</span>
-                    <h4 class="selected-date">lunes 7 de septiembre</h4>
-
-                    <div class="booking-section">
-                        <label class="section-label">Horarios disponibles</label>
-                        <div class="time-slots" role="group" aria-label="Horarios disponibles">
-                            <button type="button" class="slot-btn active" aria-pressed="true">8:00 a. m.</button>
-                            <button type="button" class="slot-btn">10:30 a. m.</button>
-                        </div>
-                    </div>
-
-                    <div class="booking-section">
-                        <label class="section-label">Modalidad de atención</label>
-                        <div class="modality-options" role="group" aria-label="Modalidad de atención">
-                            <button type="button" class="modality-btn active" aria-pressed="true">Presencial</button>
-                            <button type="button" class="modality-btn">Virtual</button>
-                            <button type="button" class="modality-btn">Llamada</button>
-                        </div>
-                    </div>
-
-                    <button type="button" class="booking-submit">Agendar cita</button>
-                </div>
-            </div>
+        <!-- Información institucional -->
+        <div class="contact-info-card">
+            <h3>Información de contacto</h3>
+            <ul class="contact-info-list">
+                <li>
+                    <b aria-hidden="true">⌂</b> 
+                    <span><strong>Dirección:</strong> Universidad Surcolombiana, Sede Central, Avenida Pastrana Borrero - Carrera 1, Neiva, Huila</span>
+                </li>
+                <li>
+                    <b aria-hidden="true">☏</b> 
+                    <span><strong>Teléfono:</strong> (608) 875 4753 · Ext. 2201</span>
+                </li>
+                <li>
+                    <b aria-hidden="true">✉</b> 
+                    <span><strong>Correo:</strong> cesurcafe@usco.edu.co</span>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
@@ -591,27 +577,29 @@
         let dragStartX = 0;
         let initialScrollLeft = 0;
 
-        carouselContainer.addEventListener('mousemove', (event) => {
-            const bounds = carouselContainer.getBoundingClientRect();
-            customCursor.style.left = `${event.clientX - bounds.left}px`;
-            customCursor.style.top = `${event.clientY - bounds.top}px`;
-        });
-        sliderTrack.addEventListener('mousedown', (event) => {
-            isDragging = true;
-            sliderTrack.classList.add('is-dragging');
-            dragStartX = event.pageX - sliderTrack.offsetLeft;
-            initialScrollLeft = sliderTrack.scrollLeft;
-        });
-        ['mouseleave', 'mouseup'].forEach((eventName) => sliderTrack.addEventListener(eventName, () => {
-            isDragging = false;
-            sliderTrack.classList.remove('is-dragging');
-        }));
-        sliderTrack.addEventListener('mousemove', (event) => {
-            if (!isDragging) return;
-            event.preventDefault();
-            const currentX = event.pageX - sliderTrack.offsetLeft;
-            sliderTrack.scrollLeft = initialScrollLeft - (currentX - dragStartX) * 1.5;
-        });
+        if (carouselContainer && sliderTrack && customCursor) {
+            carouselContainer.addEventListener('mousemove', (event) => {
+                const bounds = carouselContainer.getBoundingClientRect();
+                customCursor.style.left = `${event.clientX - bounds.left}px`;
+                customCursor.style.top = `${event.clientY - bounds.top}px`;
+            });
+            sliderTrack.addEventListener('mousedown', (event) => {
+                isDragging = true;
+                sliderTrack.classList.add('is-dragging');
+                dragStartX = event.pageX - sliderTrack.offsetLeft;
+                initialScrollLeft = sliderTrack.scrollLeft;
+            });
+            ['mouseleave', 'mouseup'].forEach((eventName) => sliderTrack.addEventListener(eventName, () => {
+                isDragging = false;
+                sliderTrack.classList.remove('is-dragging');
+            }));
+            sliderTrack.addEventListener('mousemove', (event) => {
+                if (!isDragging) return;
+                event.preventDefault();
+                const currentX = event.pageX - sliderTrack.offsetLeft;
+                sliderTrack.scrollLeft = initialScrollLeft - (currentX - dragStartX) * 1.5;
+            });
+        }
 
         const modal = document.querySelector('#card-modal');
         const modalKicker = document.querySelector('#modal-kicker');
@@ -685,6 +673,34 @@
             if (event.key === 'Escape' && !alliancePopover.hidden) closeAlliancePopover();
         });
 
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const splide = new Splide('#testimonials-carousel', {
+                type: 'loop',
+                drag: 'free',
+                focus: 'center',
+                perPage: 3,
+                gap: '1.5rem',
+                autoWidth: false,
+                pagination: true,
+                arrows: true,
+                autoScroll: {
+                    speed: 1,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
+                },
+                breakpoints: {
+                    1024: { perPage: 2 },
+                    640: { perPage: 1 }
+                }
+            });
+
+            splide.mount(window.splide.Extensions);
+        });
     </script>
 
 </body>

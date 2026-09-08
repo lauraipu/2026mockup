@@ -1,29 +1,49 @@
 :root {
-    /* Paleta Institucional USCO */
-    --color-institucional: #8F141B;
-    --color-institucional-dark: #6D1014;
-    --color-institucional-header: #7A1117;
-    --accent-color: var(--color-institucional);
-    --accent-gold: #DFD4A6;
-    --accent-slate: #4D626C;
-    --accent-on-dark: #E3C5C6;
-    --focus-ring: #8F141B;
+    /* Colores Principales USCO (Rojos / Granates) */
+    --color-institucional: #8F141B;        /* Rojo borgoña/guinda institucional */
+    --color-institucional-alt: #7a1117;    /* Variante guinda para bordes y detalles */
+    --color-institucional-dark: #6d1014;   /* Rojo oscuro para hover */
+    --color-institucional-sub: #E3C5C6;    /* Rosado claro para subtítulos/header */
 
-    /* Neutros y Superficies */
-    --bg-page: #EDEFF0;
-    --bg-surface: #FFFFFF;
-    --bg-soft: #E4E7E9;
+    /* Colores Secundarios USCO (Dorados / Beige) */
+    --accent-gold: #DFD4A6;               /* Beige/dorado institucional */
+
+    /* Color Institucional GOV.CO */
+    --color-govco: #0066cd;                /* Azul institucional barra superior */
+
+    /* Tonos de Selección Secundaria (Gris / Azul petróleo) */
+    --bg-select-light: #EDEFF0;           /* Fondo claro de selectores */
+    --text-select-active: #4D626C;        /* Gris azulado para opción seleccionada */
+    --text-dark-contrast: #1E262B;        /* Texto oscuro de contraste */
+    --bg-cream-contrast: #F9F6ED;         /* Crema de contraste */
+
+    /* Estados de Error y Alerta */
+    --alert-error-bg: #f8d7da;            /* Fondo rosa claro */
+    --alert-error-text: #721c24;          /* Texto rojo oscuro */
+    --alert-error-border: #f5c6cb;        /* Borde contenedor de error */
+
+    /* Neutros y Base (Estructura y Formularios) */
+    --bg-surface: #ffffff;                 /* Blanco puro para tarjetas/inputs */
+    --border-light: #e9e9e9;              /* Gris claro divisores */
+    --border-medium: #cccccc;             /* Gris medio bordes */
+    --text-placeholder: #999999;          /* Placeholder / íconos */
+    --text-secondary: #888888;            /* Texto secundario */
+    --text-primary: #333333;              /* Texto principal */
+    --btn-disabled: #b0b0b0;              /* Botones deshabilitados */
+
+    /* Alias de uso general para mantener toda la interfaz en la paleta institucional */
+    --bg-page: #F9F6ED;
     --bg-dark: #1E262B;
-    --text-primary: #1E262B;
-    --text-secondary: #4D626C;
-    --border-color: #CED4DA;
-
-    /* Tipografías y Transiciones */
+    --bg-soft: #EDEFF0;
+    --border-color: #e9e9e9;
+    --focus-ring: #7a1117;
+    --accent-color: #8F141B;
+    --accent-slate: #4D626C;
+    --accent-on-dark: #F9F6ED;
     --font-main: Georgia, 'Times New Roman', serif;
-    --font-ui: 'Trebuchet MS', Arial, sans-serif;
+    --font-ui: 'Segoe UI', sans-serif;
     --transition: 180ms ease;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -81,7 +101,8 @@ img, svg { max-width: 100%; height: auto; }
     justify-content: center;
     gap: 0.4rem;
     min-height: 30px;
-    background: var(--bg-dark);
+    background-color: rgb(0, 102, 205);
+    padding: 4px 0px;
     color: var(--bg-page);
     font-family: var(--font-ui);
     font-size: 0.68rem;
@@ -283,33 +304,183 @@ main > section, #panel-usuario, #panel-admin { scroll-margin-top: 72px; }
 .card-text-block h3 { margin-bottom: 0.8rem; font-size: 2rem; line-height: 1.1; }
 .card-text-block p { color: var(--text-secondary); }
 .card-media-block { display: flex; align-items: center; justify-content: center; background: var(--bg-dark); color: var(--accent-gold); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.testimonials-section { 
+    background: var(--bg-dark); 
+    color: #ffffff; 
+}
 
-.testimonials-section { background: var(--bg-dark); color: #ffffff; }
-.testimonials-section .eyebrow-text, .testimonials-section .section-header p { color: var(--accent-gold); }
-.testimonials-section .section-header h2 { color: #ffffff; }
-.testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.testimonial-card { border-color: var(--accent-slate); background: #263037; }
-.testimonial-card p { color: var(--accent-on-dark); font-style: italic; }
-.quote-icon { display: block; color: var(--accent-gold); font-size: 3rem; line-height: 0.8; }
-.testimonial-card small { display: block; margin-top: 1.25rem; color: var(--accent-on-dark); font-family: var(--font-ui); }
-.drag-carousel-container { position: relative; max-width: 1000px; margin: 2rem auto 0; overflow: hidden; cursor: none; }
-.slider-track { display: flex; gap: 1.5rem; overflow-x: auto; padding: 0.25rem 0.25rem 1rem; scroll-behavior: smooth; scrollbar-width: none; }
-.slider-track::-webkit-scrollbar { display: none; }
-.slider-track.is-dragging { cursor: grabbing; scroll-behavior: auto; }
-.slide-card { min-width: min(78%, 760px); flex-shrink: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 12px; background: #ffffff; color: var(--text-primary); }
-.slide-card.dark-variant { border-color: var(--accent-slate); background: var(--bg-dark); color: #ffffff; }
-.card-preview { position: relative; height: 220px; overflow: hidden; background: var(--accent-slate); }
-.card-preview img { display: block; width: 100%; height: 100%; filter: grayscale(100%); object-fit: cover; }
-.preview-label { position: absolute; top: 1rem; left: 1rem; padding: 0.35rem 0.65rem; border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 999px; background: rgba(30, 38, 43, 0.8); color: #ffffff; font-family: var(--font-ui); font-size: 0.7rem; }
-.card-info { padding: 1.5rem 1.75rem 1.75rem; }
-.card-info h3 { margin-bottom: 0.55rem; font-family: var(--font-ui); font-size: 1.35rem; line-height: 1.2; }
-.card-info .arrow { display: inline-block; margin-right: 0.25rem; color: var(--text-secondary); }
-.dark-variant .card-info .arrow { color: var(--accent-on-dark); }
-.card-info p { max-width: 620px; color: var(--text-secondary); font-size: 1rem; }
-.dark-variant .card-info p { color: var(--accent-on-dark); }
-.custom-cursor { position: absolute; z-index: 2; display: flex; width: 74px; height: 74px; align-items: center; justify-content: center; flex-direction: column; border-radius: 50%; background: rgba(122, 17, 23, 0.88); color: #ffffff; font-size: 1.2rem; pointer-events: none; transform: translate(-50%, -50%); }
-.custom-cursor span { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; }
+.testimonials-section .eyebrow-text, 
+.testimonials-section .section-header p { 
+    color: var(--accent-gold); 
+}
 
+.testimonials-section .section-header h2 { 
+    color: #ffffff; 
+}
+
+/* --- Contenedor Principal de Splide --- */
+#testimonials-carousel {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+}
+
+/* --- Estructura y tarjetas de Splide --- */
+.splide__track {
+    overflow: hidden;
+    width: 100%;
+}
+
+.splide__list {
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.splide__slide {
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.splide__slide .slide-card {
+    width: 100%;
+    min-width: 0 !important;
+    height: 100%;
+    border: 1px solid var(--border-color); 
+    border-radius: 12px; 
+    background: #ffffff; 
+    color: var(--text-primary); 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.slide-card {
+    height: 100%;
+}
+
+.slide-card.dark-variant { 
+    border-color: var(--accent-slate); 
+    background: var(--bg-dark); 
+    color: #ffffff; 
+}
+
+/* --- Previsualización de Imagen --- */
+.card-preview { 
+    position: relative; 
+    height: 220px; 
+    overflow: hidden; 
+    background: var(--accent-slate); 
+}
+
+.card-preview img { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    filter: grayscale(100%); 
+    object-fit: cover; 
+    transition: filter 0.3s ease;
+}
+
+.slide-card:hover .card-preview img {
+    filter: grayscale(0%); /* Efecto suave al pasar el mouse */
+}
+
+.preview-label { 
+    position: absolute; 
+    top: 1rem; 
+    left: 1rem; 
+    padding: 0.35rem 0.65rem; 
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+    border-radius: 999px; 
+    background: rgba(30, 38, 43, 0.8); 
+    color: #ffffff; 
+    font-family: var(--font-ui); 
+    font-size: 0.7rem; 
+}
+
+/* --- Información de la Tarjeta --- */
+.card-info { 
+    padding: 1.5rem 1.75rem 1.75rem; 
+    flex-grow: 1;
+}
+
+.card-info h3 { 
+    margin-bottom: 0.55rem; 
+    font-family: var(--font-ui); 
+    font-size: 1.25rem; 
+    line-height: 1.2; 
+}
+
+.card-info .arrow { 
+    display: inline-block; 
+    margin-right: 0.25rem; 
+    color: var(--text-secondary); 
+}
+
+.dark-variant .card-info .arrow { 
+    color: var(--accent-on-dark); 
+}
+
+.card-info p { 
+    color: var(--text-secondary); 
+    font-size: 0.95rem; 
+}
+
+.dark-variant .card-info p { 
+    color: var(--accent-on-dark); 
+}
+
+/* ==========================================================================
+   ESTILOS DE ACCESIBILIDAD Y CONTROLES SPLIDE (Sugeridos para USCO)
+   ========================================================================== */
+
+/* Botón de Pausa Accesible */
+.splide__toggle-container {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.splide__toggle {
+    background: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.splide__toggle:hover,
+.splide__toggle:focus-visible {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+}
+
+/* Flechas de Navegación */
+.splide__arrow {
+    background: rgba(30, 38, 43, 0.85);
+    border: 1px solid var(--accent-slate);
+}
+
+.splide__arrow svg {
+    fill: var(--accent-gold);
+}
+
+/* Puntos Indicadores (Pagination Dots) */
+.splide__pagination__page {
+    background: var(--accent-slate);
+    opacity: 0.6;
+}
+
+.splide__pagination__page.is-active {
+    background: var(--accent-gold);
+    opacity: 1;
+    transform: scale(1.2);
+}
 .events-section { padding: 5rem max(1.5rem, calc((100% - 1000px) / 2)); background: var(--bg-surface); }
 .events-list { display: grid; gap: 0.8rem; max-width: 1000px; margin: 2rem auto 0; }
 .event-item { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; align-items: center; gap: 1.25rem; padding: 1.1rem 1.25rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: var(--bg-page); }
@@ -425,10 +596,10 @@ body.modal-open { overflow: hidden; }
 .metric-card > strong { display: block; color: var(--text-primary); font-family: var(--font-ui); font-size: 1.7rem; line-height: 1; }
 .metric-card p { margin: 0.3rem 0; color: var(--text-secondary); font-family: var(--font-ui); font-size: 0.74rem; }
 .metric-card small { color: var(--text-secondary); font-family: var(--font-ui); font-size: 0.65rem; }
-.metric-pending { border-color: var(--accent-gold); }.metric-pending > span { background: #FAF5E4; color: #8F141B; }
-.metric-drafts { border-color: var(--accent-on-dark); }.metric-drafts > span { background: #F8E8E9; color: var(--color-institucional-dark); }
+.metric-pending { border-color: var(--accent-gold); }.metric-pending > span { background: var(--bg-cream-contrast); color: #8F141B; }
+.metric-drafts { border-color: var(--accent-on-dark); }.metric-drafts > span { background: var(--alert-error-bg); color: var(--color-institucional-dark); }
 .metric-users { border-color: var(--accent-slate); }.metric-users > span { background: var(--bg-soft); color: var(--accent-slate); }
-.metric-pubs { border-color: var(--accent-gold); }.metric-pubs > span { background: #FAF5E4; color: var(--color-institucional); }
+.metric-pubs { border-color: var(--accent-gold); }.metric-pubs > span { background: var(--bg-cream-contrast); color: var(--color-institucional); }
 .admin-chart-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1rem; margin-top: 1.5rem; }
 .admin-chart, .admin-table-card { overflow: hidden; border: 1px solid var(--border-color); border-radius: 16px; background: #ffffff; }
 .admin-chart { min-height: 270px; padding: 1.25rem; }
@@ -648,7 +819,7 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
 
 .booking-calendar {
     padding: 1.25rem 1.5rem;
-    background: #FAFAFA;
+    background: var(--bg-select-light);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -690,9 +861,9 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
 }
 
 .day-btn.disabled, .day-btn:disabled {
-    background: #EFEFEF;
-    color: #A0A0A0;
-    border-color: #E0E0E0;
+    background: var(--border-light);
+    color: var(--text-placeholder);
+    border-color: var(--border-medium);
     cursor: not-allowed;
     opacity: 0.7;
 }
@@ -790,7 +961,7 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
     padding: 0.85rem;
     border: none;
     border-radius: 6px;
-    background: #62B598; /* Tono verde del botón agendar */
+    background: var(--color-institucional);
     color: #ffffff;
     font-family: var(--font-ui);
     font-weight: 700;
@@ -800,7 +971,7 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
 }
 
 .booking-submit:hover {
-    background: #4E9B81;
+    background: var(--color-institucional-dark);
 }
 
 /* Ajuste Responsivo */
@@ -890,7 +1061,6 @@ input:focus, textarea:focus { border-color: var(--accent-color) !important; outl
     .drag-carousel-container { margin-top: 1.5rem; cursor: default; }
     .custom-cursor { display: none; }
     .slider-track { gap: 1rem; padding-right: 1rem; }
-    .slide-card { min-width: 92%; }
     .card-preview { height: 175px; }
     .card-info { padding: 1.25rem; }
     .card-info h3 { font-size: 1.15rem; }
