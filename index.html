@@ -3,32 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CESURCAFÉ - Centro Surcolombiano de Investigación en Café, Universidad Surcolombiana. Investigación, servicios científicos y acompañamiento a la caficultura del Huila.">
     <title>CESURCAFÉ - Centro de Estudios e Investigaciones del Café</title>
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <!-- TOP BAR GOV.CO — Matriz ITA 2.1: enlace al Portal Único del Estado Colombiano -->
+    <div class="govco-topbar">
+        <a href="https://www.gov.co/" target="_blank" rel="noopener">
+            <span class="govco-mark" aria-hidden="true">GOV.CO</span>
+            Portal Único del Estado Colombiano
+        </a>
+    </div>
+
     <!-- NAVBAR / HEADER -->
     <header class="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navegación principal">
             <a href="#inicio" class="logo">
-                <span class="logo-mark">■</span>
+                <span class="logo-mark" aria-hidden="true">■</span>
                 <span class="logo-text">CESURCAFÉ</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link active" aria-current="page">Inicio</a></li>
                 <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
                 <li><a href="#mision-vision" class="nav-link">Misión y Visión</a></li>
                 <li><a href="#investigadores" class="nav-link">Investigadores</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#repositorio" class="nav-link">Repositorio</a></li>
+                <li><a href="#alianzas" class="nav-link">Alianzas</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 <li><a href="Paneles.html" class="nav-link login-button">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <!-- HERO / INICIO -->
         <section id="inicio" class="page-hero">
             <span class="hero-eyebrow">Universidad Surcolombiana</span>
@@ -95,7 +110,7 @@
                 <h2>Equipo de Investigadores</h2>
                 <p>Docentes, científicos y profesionales dedicados al desarrollo del sector cafetero.</p>
             </div>
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0;">
+            <div class="team-grid">
                 <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="carlos">
                     <div class="investigator-photo-wrap">
                         <img class="investigator-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=85" alt="Dr. Carlos Eduardo Ramos">
@@ -301,56 +316,212 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto" class="section-padding">
+        <!-- ALIANZAS Y REDES (trasladado desde el footer al cuerpo de la página) -->
+        <section id="alianzas" class="section-padding alliances-section">
             <div class="section-header center-text">
-                <span class="eyebrow-text">Atención</span>
-                <h2>Contacto e Inquietudes</h2>
-                <p>Escríbenos directamente o visítanos en la Universidad Surcolombiana.</p>
+                <span class="eyebrow-text">Cooperación</span>
+                <h2>Alianzas y Redes</h2>
+                <p>Convenios nacionales e internacionales que fortalecen la investigación cafetera.</p>
             </div>
-            
-            <div style="max-width: 600px; margin: 0 auto; background: var(--bg-surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
-                <form action="https://wa.me/" method="get" target="_blank" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div>
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">Nombre Completo</label>
-                        <input type="text" name="text" placeholder="Tu nombre" required style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px;">
-                    </div>
-                    <div>
-                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">Asunto o Mensaje</label>
-                        <textarea rows="4" placeholder="Escribe tu mensaje o consulta para el equipo..." style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px;"></textarea>
-                    </div>
-                    <button type="submit" style="background: var(--accent-color); color: #fff; padding: 0.8rem; border: none; border-radius: 4px; font-weight: 600; cursor: pointer;">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <section class="footer-networks" aria-labelledby="footer-networks-title">
-                <h2 id="footer-networks-title" class="visually-hidden">Alianzas y Redes</h2>
-                <ul class="network-list">
-                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad de Manchester - Universidad de los Andes" data-alliance-info="Coffee from Advanced Fermentation, Engineering and Sensing. Financiación: British Council, Newton Fund Institutional.">Universidad de Manchester - Universidad de los Andes</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad Federal de Lavras" data-alliance-info="Alianza internacional para promover el intercambio de estudiantes, profesores e investigadores entre la UFAL y la USCO, a nivel de grado y posgrado.">Universidad Federal de Lavras</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="Convenio especial de cooperación N° 085" data-alliance-info="Convenio para el desarrollo de actividades de ciencia, tecnología e innovación entre el departamento del Huila y la Universidad Surcolombiana-USCO.">Convenio especial de cooperación N° 085</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="Coffee Andes SAS" data-alliance-info="Convenio para la entrega en comodato de equipos y materiales destinados a actividades de investigación, ciencia, tecnología e innovación.">Agroindustria de los Andes Colombianos - Coffee Andes SAS</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad de Ciencias Aplicadas de Zurich" data-alliance-info="Universidad de Ciencias Aplicadas de Zurich - ZHAW.">Universidad de Ciencias Aplicadas de Zurich - ZHAW</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="Universidad Estatal de Kansas" data-alliance-info="Universidad Estatal de Kansas - K-state.">Universidad Estatal de Kansas - K-state</button></li>
-                    <li><button class="alliance-button" type="button" data-alliance-title="CATIE y Universidad Politécnica de Madrid" data-alliance-info="Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) y Universidad Politécnica de Madrid. Alianza en trámite.">CATIE - Universidad Politécnica de Madrid</button></li>
+            <div class="alliances-grid">
+                <ul class="alliances-list">
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Universidad de Manchester - Universidad de los Andes" data-alliance-info="Coffee from Advanced Fermentation, Engineering and Sensing. Financiación: British Council, Newton Fund Institutional.">Universidad de Manchester - Universidad de los Andes</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Universidad Federal de Lavras" data-alliance-info="Alianza internacional para promover el intercambio de estudiantes, profesores e investigadores entre la UFAL y la USCO, a nivel de grado y posgrado.">Universidad Federal de Lavras</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Convenio especial de cooperación N° 085" data-alliance-info="Convenio para el desarrollo de actividades de ciencia, tecnología e innovación entre el departamento del Huila y la Universidad Surcolombiana-USCO.">Convenio especial de cooperación N° 085</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Coffee Andes SAS" data-alliance-info="Convenio para la entrega en comodato de equipos y materiales destinados a actividades de investigación, ciencia, tecnología e innovación.">Agroindustria de los Andes Colombianos - Coffee Andes SAS</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Universidad de Ciencias Aplicadas de Zurich" data-alliance-info="Universidad de Ciencias Aplicadas de Zurich - ZHAW.">Universidad de Ciencias Aplicadas de Zurich - ZHAW</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="Universidad Estatal de Kansas" data-alliance-info="Universidad Estatal de Kansas - K-state.">Universidad Estatal de Kansas - K-state</button></li>
+                    <li><button class="alliance-button-light" type="button" data-alliance-title="CATIE y Universidad Politécnica de Madrid" data-alliance-info="Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) y Universidad Politécnica de Madrid. Alianza en trámite.">CATIE - Universidad Politécnica de Madrid</button></li>
                 </ul>
                 <div class="alliance-popover" id="alliance-popover" role="dialog" aria-modal="false" aria-labelledby="alliance-popover-title" hidden>
                     <button class="alliance-popover-close" type="button" aria-label="Cerrar información">&times;</button>
                     <h3 id="alliance-popover-title"></h3>
                     <p id="alliance-popover-info"></p>
                 </div>
-            </section>
+            </div>
+        </section>
+
+    <!-- SECCIÓN DE CONTACTO Y AGENDA -->
+<section id="contacto" class="section-padding">
+    <div class="section-header">
+        <span class="eyebrow-text">Atención al ciudadano</span>
+        <h2>Contacto y agenda</h2>
+    </div>
+
+    <div class="contact-layout">
+        <!-- COLUMNA IZQUIERDA: Formulario de contacto e Información Institucional -->
+        <div class="contact-left-col">
+            <div class="contact-form-card">
+                <h3>Formulario de contacto</h3>
+                <p class="form-legend-note">Los campos marcados con <span class="required-flag" aria-hidden="true">*</span> son obligatorios.</p>
+                
+                <form action="https://wa.me/" method="get" target="_blank" class="contact-form-group">
+                    <div>
+                        <label for="contact-name">Nombre completo <span class="required-flag" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo" required aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="contact-info">Correo o teléfono de contacto <span class="required-flag" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-info" name="contact" placeholder="Ej. correo@ejemplo.com o 3001234567" required aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="contact-message">Asunto, causa o mensaje <span class="required-flag" aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Escribe el motivo de tu consulta o PQRSD..." required aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <hr class="contact-divider" aria-hidden="true">
+
+            <!-- Información institucional ubicadas debajo del botón para equilibrio visual -->
+            <div class="contact-info-card">
+                <h3>Información de contacto</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <b aria-hidden="true">⌂</b> 
+                        <span><strong>Dirección:</strong> Universidad Surcolombiana, Sede Central, Avenida Pastrana Borrero - Carrera 1, Neiva, Huila</span>
+                    </li>
+                    <li>
+                        <b aria-hidden="true">☏</b> 
+                        <span><strong>Teléfono:</strong> (608) 875 4753 · Ext. 2201</span>
+                    </li>
+                    <li>
+                        <b aria-hidden="true">✉</b> 
+                        <span><strong>Correo:</strong> cesurcafe@usco.edu.co</span>
+                    </li>
+                </ul>
+
+                <div class="contact-schedule">
+                    <h4>Horario de atención presencial</h4>
+                    <table class="schedule-table">
+                        <caption class="visually-hidden">Horario de atención al público de CESURCAFÉ</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes a viernes</td>
+                                <td>8:00 a. m. - 12:00 m. y 2:00 p. m. - 6:00 p. m.</td>
+                            </tr>
+                            <tr>
+                                <td>Sábados</td>
+                                <td>8:00 a. m. - 12:00 m.</td>
+                            </tr>
+                            <tr>
+                                <td>Domingos y festivos</td>
+                                <td>Cerrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="pqrs-note">Para PQRSD radicadas fuera del horario de atención presencial, utilice el formulario en línea o el correo institucional; la respuesta se gestionará el siguiente día hábil.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: Agendamiento de Citas -->
+        <div class="contact-right-col">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>Agenda tu cita</h3>
+                    <p class="booking-subtitle">Disponibilidad del 7 al 11 de septiembre</p>
+                </div>
+
+                <!-- Selector de días de la semana -->
+                <div class="booking-calendar">
+                    <div class="calendar-days" role="group" aria-label="Selección de día de la semana">
+                        <button type="button" class="day-btn active" aria-pressed="true">
+                            <span class="day-name">LUN</span>
+                            <span class="day-number">7</span>
+                        </button>
+                        <button type="button" class="day-btn">
+                            <span class="day-name">MAR</span>
+                            <span class="day-number">8</span>
+                        </button>
+                        <button type="button" class="day-btn disabled" disabled aria-disabled="true">
+                            <span class="day-name">MIÉ</span>
+                            <span class="day-number">9</span>
+                        </button>
+                        <button type="button" class="day-btn">
+                            <span class="day-name">JUE</span>
+                            <span class="day-number">10</span>
+                        </button>
+                        <button type="button" class="day-btn">
+                            <span class="day-name">VIE</span>
+                            <span class="day-number">11</span>
+                        </button>
+                    </div>
+                    <p class="calendar-note">Solo se habilita la semana publicada. Los días sin cupo aparecen desactivados.</p>
+                </div>
+
+                <!-- Detalles del día seleccionado y opciones de cita -->
+                <div class="booking-details">
+                    <span class="section-sublabel">FECHA SELECCIONADA</span>
+                    <h4 class="selected-date">lunes 7 de septiembre</h4>
+
+                    <div class="booking-section">
+                        <label class="section-label">Horarios disponibles</label>
+                        <div class="time-slots" role="group" aria-label="Horarios disponibles">
+                            <button type="button" class="slot-btn active" aria-pressed="true">8:00 a. m.</button>
+                            <button type="button" class="slot-btn">10:30 a. m.</button>
+                        </div>
+                    </div>
+
+                    <div class="booking-section">
+                        <label class="section-label">Modalidad de atención</label>
+                        <div class="modality-options" role="group" aria-label="Modalidad de atención">
+                            <button type="button" class="modality-btn active" aria-pressed="true">Presencial</button>
+                            <button type="button" class="modality-btn">Virtual</button>
+                            <button type="button" class="modality-btn">Llamada</button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="booking-submit">Agendar cita</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-brand-mark" aria-hidden="true">■</span>
+                <strong>CESURCAFÉ</strong>
+                <small>Centro Surcolombiano de Investigación en Café · Universidad Surcolombiana</small>
+                <small class="footer-contact-line">Neiva, Huila · cesurcafe@usco.edu.co · (608) 875 4753</small>
+            </div>
+
+            <div class="footer-service-lines">
+                <strong>Canales de atención al ciudadano</strong>
+                <span>Conmutador USCO: (608) 875 4753 · Línea gratuita nacional: 018000 968624</span>
+                <span><a href="https://www.usco.edu.co/es/atencion-al-ciudadano/denuncias/" target="_blank" rel="noopener" class="footer-service-link">Línea anticorrupción y denuncias</a> · <a href="https://www.usco.edu.co/es/atencion-al-ciudadano/notificaciones-judiciales/" target="_blank" rel="noopener" class="footer-service-link">Notificaciones judiciales</a></span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Enlaces legales e institucionales">
+                <a href="#inicio">Sitio público</a>
+                <a href="#contacto">PQRSD y canales físicos/electrónicos de atención</a>
+                <a href="https://www.usco.edu.co/es/transparencia/" target="_blank" rel="noopener">Política de tratamiento de datos</a>
+                <a href="https://www.usco.edu.co/normatividad" target="_blank" rel="noopener">Términos y condiciones</a>
+                <a href="https://www.usco.edu.co/" target="_blank" rel="noopener">Mapa del sitio</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://www.gov.co/" target="_blank" rel="noopener" class="social-item">Portal Único del Estado Colombiano</a>
+                <a href="https://www.usco.edu.co/" target="_blank" rel="noopener" class="social-item">Universidad Surcolombiana</a>
+                <a href="#alianzas" class="social-item">Alianzas y Redes</a>
+            </div>
+
+            <hr class="footer-divider">
+
             <div class="footer-bottom">
                 <p>&copy; 2026 CESURCAFÉ - Universidad Surcolombiana. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="#inicio" class="social-item">Inicio</a>
-                    <a href="#contacto" class="social-item">Contacto</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -366,6 +537,32 @@
     </div>
 
     <script>
+        // MENÚ HAMBURGUESA (navegación responsive)
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        function closeNavMenu() {
+            navMenu.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        navMenu.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', closeNavMenu));
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+                closeNavMenu();
+                navToggle.focus();
+            }
+        });
+        document.addEventListener('click', (event) => {
+            if (navMenu.classList.contains('is-open') && !event.target.closest('.navbar')) closeNavMenu();
+        });
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.carousel-dot');
         let currentSlide = 0;
@@ -382,7 +579,10 @@
         document.querySelector('.carousel-control-prev').addEventListener('click', () => showSlide(currentSlide - 1));
         document.querySelector('.carousel-control-next').addEventListener('click', () => showSlide(currentSlide + 1));
         dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
-        setInterval(() => showSlide(currentSlide + 1), 5000);
+        // El auto-avance se detiene si el usuario prefiere menos movimiento (WCAG 2.2.2)
+        if (!prefersReducedMotion) {
+            setInterval(() => showSlide(currentSlide + 1), 5000);
+        }
 
         const carouselContainer = document.querySelector('.drag-carousel-container');
         const sliderTrack = document.querySelector('#sliderTrack');
@@ -472,7 +672,7 @@
             alliancePopover.hidden = true;
         }
 
-        document.querySelectorAll('.alliance-button').forEach((button) => {
+        document.querySelectorAll('.alliance-button-light').forEach((button) => {
             button.addEventListener('click', () => {
                 alliancePopoverTitle.textContent = button.dataset.allianceTitle;
                 alliancePopoverInfo.textContent = button.dataset.allianceInfo;
