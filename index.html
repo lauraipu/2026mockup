@@ -20,17 +20,24 @@
         </a>
     </div>
 
-    <!-- NAVBAR / HEADER -->
-    <header class="header">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="#inicio" class="logo">
-                <span class="logo-mark" aria-hidden="true">■</span>
-                <span class="logo-text">CESURCAFÉ</span>
-            </a>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
-                <span class="nav-toggle-bars" aria-hidden="true"></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
+    <!-- BOTÓN FLOTANTE Y PANEL DE NAVEGACIÓN -->
+    <div class="floating-nav-container">
+        <button class="nav-toggle-floating" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+            <span class="nav-toggle-text">Menú</span>
+        </button>
+
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+
+        <nav class="nav-drawer" id="nav-menu" aria-label="Navegación principal">
+            <div class="drawer-header">
+                <a href="#inicio" class="logo logo-brand-container">
+                    <img src="imagenes/logousco.jpg" alt="Universidad Surcolombiana" class="brand-logo usco-logo">
+                    <img src="imagenes/logocesurcafe.jpg" alt="CESURCAFÉ" class="brand-logo cesurcafe-logo">
+                </a>
+                <button class="drawer-close" type="button" aria-label="Cerrar menú">✕</button>
+            </div>
+            <ul class="nav-menu-list">
                 <li><a href="#inicio" class="nav-link active" aria-current="page">Inicio</a></li>
                 <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
                 <li><a href="#mision-vision" class="nav-link">Misión y Visión</a></li>
@@ -39,11 +46,8 @@
                 <li><a href="#repositorio" class="nav-link">Repositorio</a></li>
                 <li><a href="#alianzas" class="nav-link">Alianzas</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                
             </ul>
         </nav>
-    </header>
-
     <main id="main-content" tabindex="-1">
         <!-- HERO / INICIO -->
         <section id="inicio" class="page-hero">
@@ -83,7 +87,7 @@
             </div>
         </section>
 
-        <!-- MISIÓN Y VISIÓN -->
+      <!-- MISIÓN Y VISIÓN -->
         <section id="mision-vision" class="mission-vision-section">
             <div class="section-header center-text">
                 <span class="eyebrow-text light-eyebrow">Nuestro Propósito</span>
@@ -94,95 +98,331 @@
                 <article class="purpose-card">
                     <span class="purpose-number">01</span>
                     <h3>Misión</h3>
-                    <p>Generar y transferir conocimiento científico y tecnológico que fortalezca la calidad, la innovación y la sostenibilidad de la caficultura surcolombiana.</p>
+                    <p>Desarrollar investigación científica y formar talento humano calificado para resolver las preguntas clave y desafíos del subsector cafetero, fortaleciendo la innovación y sostenibilidad en la región.</p>
                 </article>
                 <article class="purpose-card purpose-card-highlight">
                     <span class="purpose-number">02</span>
                     <h3>Visión</h3>
-                    <p>Ser un centro de referencia nacional en investigación cafetera, reconocido por conectar la academia, los productores y la industria para transformar el territorio.</p>
+                    <p>Ser un centro de excelencia y referencia nacional en investigación cafetera, reconocido por conectar la academia, los productores y la industria mediante la generación de conocimiento y formación avanzada.</p>
                 </article>
             </div>
         </section>
 
-        <!-- INVESTIGADORES -->
-        <section id="investigadores" class="team-section">
-            <div class="section-header center-text">
-                <span class="eyebrow-text">Talento Humano</span>
-                <h2>Equipo de Investigadores</h2>
-                <p>Docentes, científicos y profesionales dedicados al desarrollo del sector cafetero.</p>
-            </div>
-            <div class="team-grid">
-                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="carlos">
-                    <div class="investigator-photo-wrap">
-                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=85" alt="Dr. Carlos Eduardo Ramos">
-                        <span class="availability-badge" aria-label="Disponible">●</span>
-                    </div>
-                    <h3>Dr. Carlos Eduardo Ramos</h3>
-                    <p class="investigator-role">Director de Investigación</p>
-                    <span class="specialty-tag">Agroindustria</span>
-                    <div class="investigator-stats"><span><strong>18</strong>Publicaciones</span><span><strong>6</strong>Proyectos</span></div>
-                </div>
-                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="maria">
-                    <div class="investigator-photo-wrap">
-                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=85" alt="Dra. María Fernanda Gómez">
-                        <span class="availability-badge" aria-label="Disponible">●</span>
-                    </div>
-                    <h3>Dra. María Fernanda Gómez</h3>
-                    <p class="investigator-role">Investigadora Principal</p>
-                    <span class="specialty-tag">Fermentación</span>
-                    <div class="investigator-stats"><span><strong>14</strong>Publicaciones</span><span><strong>5</strong>Proyectos</span></div>
-                </div>
-                <div class="investigator-card card-trigger" role="button" tabindex="0" data-modal="javier">
-                    <div class="investigator-photo-wrap">
-                        <img class="investigator-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&q=85" alt="Ing. Javier Alejandro Silva">
-                        <span class="availability-badge" aria-label="Disponible">●</span>
-                    </div>
-                    <h3>Ing. Javier Alejandro Silva</h3>
-                    <p class="investigator-role">Coordinador de Laboratorio</p>
-                    <span class="specialty-tag">Calidad de Café</span>
-                    <div class="investigator-stats"><span><strong>12</strong>Publicaciones</span><span><strong>4</strong>Proyectos</span></div>
-                </div>
-            </div>
-        </section>
 
-        <!-- SERVICIOS -->
-        <section id="servicios" class="services-sticky-wrapper">
-            <div class="section-header center-text">
-                <span class="eyebrow-text">Portafolio</span>
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones científicas y tecnológicas para productores y la industria.</p>
+<!-- TALENTO HUMANO (INVESTIGADORES Y ADMINISTRATIVOS) -->
+<section id="talento-humano" class="team-section">
+    <div class="section-header center-text">
+        <span class="eyebrow-text">CESURCAFÉ - USCO</span>
+        <h2>Talento Humano</h2>
+        <p>Equipo docente, investigador y administrativo comprometido con la cadena de valor del café.</p>
+    </div>
+
+   
+
+    <div class="team-grid">
+
+        <!-- CARD 1: Dr. Nelson Gutiérrez Guzmán -->
+        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-nelson" role="button" tabindex="0">
+            <div class="investigator-photo-wrap">
+                <img class="investigator-photo" src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán">
+                <span class="availability-badge" title="Activo">●</span>
             </div>
             
-            <div class="service-stack-card">
-                <div class="card-inner-content">
-                    <div class="card-text-block">
+            <h3>Dr. Nelson Gutiérrez Guzmán</h3>
+            <p class="investigator-role">Director & Investigador Principal</p>
+            <span class="specialty-tag">Investigador & Docente</span>
+
+            <div class="investigator-stats">
+                <div class="stat-item">
+                    <strong>Doctorado</strong>
+                    <span>Nivel Educativo</span>
+                </div>
+                <div class="stat-item">
+                    <strong>ORCID</strong>
+                    <span>Perfil Científico</span>
+                </div>
+            </div>
+
+            <div class="card-footer-action">
+                <span>Ver perfil completo &rarr;</span>
+            </div>
+        </article>
+
+        <!-- CARD 2: Ing. María del Pilar Cortés Gaona -->
+        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-pilar" role="button" tabindex="0">
+            <div class="investigator-photo-wrap">
+                <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona">
+                <span class="availability-badge" title="Activo">●</span>
+            </div>
+
+            <h3>Ing. María del Pilar Cortés Gaona</h3>
+            <p class="investigator-role">Coordinadora del Centro & Investigadora</p>
+            <span class="specialty-tag">Investigadora</span>
+
+            <div class="investigator-stats">
+                <div class="stat-item">
+                    <strong>Ingeniería</strong>
+                    <span>Nivel Educativo</span>
+                </div>
+                <div class="stat-item">
+                    <strong>ORCID</strong>
+                    <span>Perfil Científico</span>
+                </div>
+            </div>
+
+            <div class="card-footer-action">
+                <span>Ver perfil completo &rarr;</span>
+            </div>
+        </article>
+
+        <!-- CARD 3: Ing. Juan Esteban Sanabria Mora -->
+        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-juan" role="button" tabindex="0">
+            <div class="investigator-photo-wrap">
+                <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora">
+                <span class="availability-badge" title="Activo">●</span>
+            </div>
+
+            <h3>Ing. Juan E. S. Mora</h3>
+            <p class="investigator-role">Investigador & Auxiliar de Investigación</p>
+            <span class="specialty-tag">Investigador & Docente</span>
+
+            <div class="investigator-stats">
+                <div class="stat-item">
+                    <strong>Maestría</strong>
+                    <span>Nivel Educativo</span>
+                </div>
+                <div class="stat-item">
+                    <strong>ORCID</strong>
+                    <span>Perfil Científico</span>
+                </div>
+            </div>
+
+            <div class="card-footer-action">
+                <span>Ver perfil completo &rarr;</span>
+            </div>
+        </article>
+
+        <!-- CARD 4: Lic. Miguel Alberto Fiorillo -->
+        <article class="investigator-card card-trigger" data-category="administrativo" data-target="modal-miguel" role="button" tabindex="0">
+            <div class="investigator-photo-wrap">
+                <div class="investigator-photo photo-placeholder">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8b0000" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <span class="availability-badge" title="Activo">●</span>
+            </div>
+
+            <h3>Lic. Miguel Alberto Fiorillo</h3>
+            <p class="investigator-role">Gestión Administrativa</p>
+            <span class="specialty-tag admin-tag">Administrativo</span>
+
+            <div class="investigator-stats">
+                <div class="stat-item">
+                    <strong>Licenciatura</strong>
+                    <span>Nivel Educativo</span>
+                </div>
+                <div class="stat-item">
+                    <strong>LinkedIn</strong>
+                    <span>Perfil Profesional</span>
+                </div>
+            </div>
+
+            <div class="card-footer-action">
+                <span>Ver perfil completo &rarr;</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- MODALES HOMOGÉNEOS CON ESTRUCTURA UNIFICADA -->
+<div class="modal-backdrop" id="modal-backdrop">
+
+    <!-- MODAL 1: NELSON GUTIÉRREZ GUZMÁN -->
+    <div class="modal-box" id="modal-nelson">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-header-profile">
+            <img src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán" class="modal-photo">
+            <div>
+                <h2>Dr. Nelson Gutiérrez Guzmán</h2>
+                <p class="modal-subtitle">Director CESURCAFÉ & Investigador Principal</p>
+                <a href="https://orcid.org/0000-0002-3909-5883" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+            </div>
+        </div>
+        <div class="modal-body-content">
+            <h4>Perfil Profesional</h4>
+            <p>Ingeniero Agrícola por la Universidad Surcolombiana y Doctor en Tecnología de Alimentos por la Universidad Politécnica de Valencia. Par evaluador Minciencias con amplia trayectoria en calidad de café e inocuidad agroalimentaria.</p>
+
+            <h4>Formación Académica</h4>
+            <ul>
+                <li><strong>Doctorado en Tecnología de Alimentos:</strong> Univ. Politécnica de Valencia (Cum Laude, 2008).</li>
+                <li><strong>Maestría en Ciencia e Ing. de Alimentos:</strong> Univ. Politécnica de Valencia (2002).</li>
+                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (1991).</li>
+            </ul>
+
+            <h4>Publicaciones & Proyectos Destacados</h4>
+            <p>Coautor e Investigador Principal en proyectos financiados por SGR y Minciencias focalizados en transferencia tecnológica y poscosecha de café en el departamento del Huila.</p>
+        </div>
+    </div>
+
+    <!-- MODAL 2: MARÍA DEL PILAR CORTÉS GAONA -->
+    <div class="modal-box" id="modal-pilar">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-header-profile">
+            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona" class="modal-photo">
+            <div>
+                <h2>Ing. María del Pilar Cortés Gaona</h2>
+                <p class="modal-subtitle">Coordinadora del Centro CESURCAFÉ</p>
+                <a href="https://orcid.org/0000-0001-7654-3659" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+            </div>
+        </div>
+        <div class="modal-body-content">
+            <h4>Perfil Profesional</h4>
+            <p>Ingeniera Agrícola vinculada a CESURCAFÉ como coordinadora operativa e investigadora en proyectos de fermentación controlada y análisis sensorial del café.</p>
+
+            <h4>Formación Académica</h4>
+            <ul>
+                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2015 - 2019).</li>
+            </ul>
+
+            <h4>Publicaciones & Trabajos Recientes</h4>
+            <p><strong>Effect of Coffee Fermentation with Candida sphaerica and Lactiplantibacillus plantarum on the Development of Sensory Characteristics</strong><br>
+            <em>Revista Politécnica (2026).</em> Coautora junto a Claudia Amorocho-Cruz, Maria Paula Quevedo Villamil y Nelson Gutiérrez-Guzmán.</p>
+        </div>
+    </div>
+
+    <!-- MODAL 3: JUAN ESTEBAN SANABRIA MORA -->
+    <div class="modal-box" id="modal-juan">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-header-profile">
+            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora" class="modal-photo">
+            <div>
+                <h2>Ing. Juan Esteban Sanabria Mora</h2>
+                <p class="modal-subtitle">Investigador & Auxiliar de Investigación</p>
+                <a href="https://orcid.org/0000-0001-5079-7968" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+            </div>
+        </div>
+        <div class="modal-body-content">
+            <h4>Perfil Profesional</h4>
+            <p>Ingeniero Agrícola por la Universidad Surcolombiana (2020) y Auxiliar de Investigación en CESURCAFÉ. Becario CAPES BRA cursando la Maestría en Ciencia de los Alimentos en la Universidad Federal de Lavras (UFLA, Brasil).</p>
+
+            <h4>Formación Académica</h4>
+            <ul>
+                <li><strong>Maestría en Ciencia de los Alimentos (En curso):</strong> Universidad Federal de Lavras (Brasil).</li>
+                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2020).</li>
+            </ul>
+
+            <h4>Áreas de Especialización</h4>
+            <p>Análisis sensorial, tecnología de alimentos y procesos de fermentación poscosecha en café.</p>
+        </div>
+    </div>
+
+    <!-- MODAL 4: MIGUEL ALBERTO FIORILLO -->
+    <div class="modal-box" id="modal-miguel">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-header-profile">
+            <div class="modal-photo photo-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8b0000" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <div>
+                <h2>Lic. Miguel Alberto Fiorillo</h2>
+                <p class="modal-subtitle">Gestión Administrativa</p>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="badge-tag link-tag admin-link">Ver Perfil LinkedIn ↗</a>
+            </div>
+        </div>
+        <div class="modal-body-content">
+            <h4>Perfil Profesional</h4>
+            <p>Profesional encargado del soporte administrativo, logístico y operativo para los proyectos, convenios y gestión documental dentro del Centro CESURCAFÉ.</p>
+
+            <h4>Formación Académica</h4>
+            <ul>
+                <li><strong>Licenciatura / Formación Profesional:</strong> Universidad Surcolombiana.</li>
+            </ul>
+
+            <h4>Coordinación & Contacto</h4>
+            <p>Atención e información institucional: <code>cesurcafe@usco.edu.co</code></p>
+        </div>
+    </div>
+
+</div>
+
+
+       <!-- SECCIÓN NUESTROS SERVICIOS -->
+<section class="services-section" id="servicios" aria-label="Portafolio de Servicios">
+    <div class="section-header center-text">
+        <span class="eyebrow-text">Portafolio</span>
+        <h2>Nuestros Servicios</h2>
+        <p>Soluciones científicas y tecnológicas para productores y la industria.</p>
+    </div>
+
+    <!-- Contenedor Libro/Revista con Región Interactiva -->
+    <div class="book-container">
+        <!-- Región accesible que anuncia los cambios de página a lectores de pantalla -->
+        <div id="book-announcer" class="sr-only" aria-live="polite" aria-atomic="true">
+            Mostrando servicio 1 de 3: Análisis de Calidad y Catación.
+        </div>
+
+        <div class="book" id="servicesBook">
+
+            <!-- HOJA 1 (Inicialmente Activa) -->
+            <article class="page active" id="page-1" aria-hidden="false">
+                <div class="page-side page-left">
+                    <div class="service-content">
                         <h3>Análisis de Calidad y Catación</h3>
                         <p>Evaluación física y sensorial de muestras de café bajo estándares internacionales SCAA.</p>
                     </div>
-                    <div class="card-media-block">Laboratorio</div>
+                    <div class="page-footer">Página 1 de 3</div>
                 </div>
-            </div>
+                <div class="page-side page-right dark-bg">
+                    <div class="service-visual">
+                        <span>LABORATORIO</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="service-stack-card">
-                <div class="card-inner-content">
-                    <div class="card-text-block">
+            <!-- HOJA 2 (Oculta para lectores de pantalla inicialmente) -->
+            <article class="page" id="page-2" aria-hidden="true">
+                <div class="page-side page-left">
+                    <div class="service-content">
+                        <h3>Asesoría en Postcosecha</h3>
+                        <p>Acompañamiento técnico para procesos de fermentación controlada y secado eficiente.</p>
+                    </div>
+                    <div class="page-footer">Página 2 de 3</div>
+                </div>
+                <div class="page-side page-right dark-bg">
+                    <div class="service-visual">
+                        <span>CAMPO Y FINCA</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- HOJA 3 -->
+            <article class="page" id="page-3" aria-hidden="true">
+                <div class="page-side page-left">
+                    <div class="service-content">
                         <h3>Investigación y Desarrollo</h3>
-                        <p>Acompañamiento en procesos de fermentación controlada, secado y valorización de subproductos.</p>
+                        <p>Proyectos aplicados a la innovación varietal y sostenibilidad de los cafetales del Huila.</p>
                     </div>
-                    <div class="card-media-block">I+D+i</div>
+                    <div class="page-footer">Página 3 de 3</div>
                 </div>
-            </div>
+                <div class="page-side page-right dark-bg">
+                    <div class="service-visual">
+                        <span>I+D+i</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="service-stack-card">
-                <div class="card-inner-content">
-                    <div class="card-text-block">
-                        <h3>Capacitación y Formación</h3>
-                        <p>Talleres y diplomados especializados dirigidos a caficultores, estudiantes y profesionales del sector.</p>
-                    </div>
-                    <div class="card-media-block">Formación</div>
-                </div>
-            </div>
-        </section>
+        </div>
+
+        <!-- Controles para pasar páginas -->
+        <div class="book-controls" aria-label="Controles del portafolio de servicios">
+            <button class="book-btn" id="prevPageBtn" type="button" aria-label="Ver servicio anterior">← Anterior</button>
+            <span class="page-indicator" id="pageIndicator" aria-hidden="true">1 / 3</span>
+            <button class="book-btn" id="nextPageBtn" type="button" aria-label="Ver siguiente servicio">Siguiente →</button>
+        </div>
+    </div>
+</section>
+
+
 <!-- TESTIMONIOS (CARRUSEL SPLIDE) -->
 <section class="testimonials-section section-padding" aria-label="Impacto en los Productores">
     <div class="section-header center-text">
@@ -454,24 +694,6 @@
             </form>
         </div>
 
-        <!-- Información institucional -->
-        <div class="contact-info-card">
-            <h3>Información de contacto</h3>
-            <ul class="contact-info-list">
-                <li>
-                    <b aria-hidden="true">⌂</b> 
-                    <span><strong>Dirección:</strong> Universidad Surcolombiana, Sede Central, Avenida Pastrana Borrero - Carrera 1, Neiva, Huila</span>
-                </li>
-                <li>
-                    <b aria-hidden="true">☏</b> 
-                    <span><strong>Teléfono:</strong> (608) 875 4753 · Ext. 2201</span>
-                </li>
-                <li>
-                    <b aria-hidden="true">✉</b> 
-                    <span><strong>Correo:</strong> cesurcafe@usco.edu.co</span>
-                </li>
-            </ul>
-        </div>
     </div>
 </section>
     <!-- FOOTER -->
@@ -523,19 +745,35 @@
     </div>
 
     <script>
-        // MENÚ HAMBURGUESA (navegación responsive)
-        const navToggle = document.querySelector('.nav-toggle');
+        // MENÚ FLOTANTE (panel lateral off-canvas)
+        const navToggle = document.querySelector('.nav-toggle-floating');
         const navMenu = document.querySelector('#nav-menu');
+        const drawerClose = document.querySelector('.drawer-close');
+        const navBackdrop = document.querySelector('#nav-backdrop');
+
+        function openNavMenu() {
+            navToggle.setAttribute('aria-expanded', 'true');
+            navMenu.classList.add('is-open');
+            navBackdrop.classList.add('is-active');
+            drawerClose.focus();
+        }
 
         function closeNavMenu() {
-            navMenu.classList.remove('is-open');
             navToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('is-open');
+            navBackdrop.classList.remove('is-active');
         }
 
         navToggle.addEventListener('click', () => {
-            const isOpen = navMenu.classList.toggle('is-open');
-            navToggle.setAttribute('aria-expanded', String(isOpen));
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            if (isOpen) {
+                closeNavMenu();
+            } else {
+                openNavMenu();
+            }
         });
+        drawerClose.addEventListener('click', closeNavMenu);
+        navBackdrop.addEventListener('click', closeNavMenu);
         navMenu.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', closeNavMenu));
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
@@ -543,11 +781,70 @@
                 navToggle.focus();
             }
         });
-        document.addEventListener('click', (event) => {
-            if (navMenu.classList.contains('is-open') && !event.target.closest('.navbar')) closeNavMenu();
-        });
 
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const pages = document.querySelectorAll('.page');
+        const prevBtn = document.querySelector('#prevPageBtn');
+        const nextBtn = document.querySelector('#nextPageBtn');
+        const indicator = document.querySelector('#pageIndicator');
+        const announcer = document.querySelector('#book-announcer');
+        const bookContainer = document.querySelector('.book-container');
+
+        if (pages.length && prevBtn && nextBtn && indicator && bookContainer) {
+            let currentPage = 0;
+            const totalPages = pages.length;
+
+            function updateBook(isInitial = false) {
+                pages.forEach((page, index) => {
+                    const isCurrent = index === currentPage;
+
+                    page.classList.remove('active', 'turned');
+                    page.setAttribute('aria-hidden', String(!isCurrent));
+
+                    if (isCurrent) {
+                        page.classList.add('active');
+                    } else if (index < currentPage) {
+                        page.classList.add('turned');
+                    }
+                });
+
+                indicator.textContent = `${currentPage + 1} / ${totalPages}`;
+                prevBtn.disabled = currentPage === 0;
+                nextBtn.disabled = currentPage === totalPages - 1;
+
+                if (!isInitial && announcer) {
+                    const activeTitle = pages[currentPage].querySelector('h3');
+                    announcer.textContent = `Mostrando servicio ${currentPage + 1} de ${totalPages}: ${activeTitle ? activeTitle.textContent : ''}.`;
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    updateBook();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updateBook();
+                }
+            });
+
+            bookContainer.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowRight' && currentPage < totalPages - 1) {
+                    currentPage++;
+                    updateBook();
+                } else if (event.key === 'ArrowLeft' && currentPage > 0) {
+                    currentPage--;
+                    updateBook();
+                }
+            });
+
+            updateBook(true);
+        }
 
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.carousel-dot');
@@ -634,7 +931,7 @@
             document.body.classList.remove('modal-open');
         }
 
-        document.querySelectorAll('.card-trigger').forEach((card) => {
+        document.querySelectorAll('.repo-card.card-trigger').forEach((card) => {
             card.addEventListener('click', () => openModal(card.dataset.modal));
             card.addEventListener('keydown', (event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
@@ -649,6 +946,61 @@
         });
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !modal.hidden) closeModal();
+        });
+
+        const teamBackdrop = document.querySelector('#modal-backdrop');
+        const teamModals = document.querySelectorAll('.modal-box');
+        const teamCards = document.querySelectorAll('.investigator-card.card-trigger');
+        const teamCloseButtons = document.querySelectorAll('.modal-close-btn');
+        const teamFilterButtons = document.querySelectorAll('.filter-btn');
+
+        function closeTeamModal() {
+            if (!teamBackdrop) return;
+            teamBackdrop.classList.remove('active');
+            teamModals.forEach((box) => box.classList.remove('active'));
+            document.body.classList.remove('modal-open');
+        }
+
+        function openTeamModal(card) {
+            const targetModal = document.getElementById(card.dataset.target);
+            if (!targetModal || !teamBackdrop) return;
+
+            teamModals.forEach((box) => box.classList.remove('active'));
+            targetModal.classList.add('active');
+            teamBackdrop.classList.add('active');
+            document.body.classList.add('modal-open');
+            targetModal.querySelector('.modal-close-btn').focus();
+        }
+
+        teamCards.forEach((card) => {
+            card.addEventListener('click', () => openTeamModal(card));
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openTeamModal(card);
+                }
+            });
+        });
+
+        teamCloseButtons.forEach((button) => button.addEventListener('click', closeTeamModal));
+        teamBackdrop?.addEventListener('click', (event) => {
+            if (event.target === teamBackdrop) closeTeamModal();
+        });
+
+        teamFilterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                teamFilterButtons.forEach((filterButton) => filterButton.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+                teamCards.forEach((card) => {
+                    card.style.display = filter === 'all' || card.dataset.category === filter ? 'flex' : 'none';
+                });
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && teamBackdrop?.classList.contains('active')) closeTeamModal();
         });
 
         const alliancePopover = document.querySelector('#alliance-popover');
