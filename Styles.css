@@ -574,21 +574,7 @@ body { padding-top: 0; }
     text-transform: uppercase;
 }
 
-.service-icon-badge {
-    position: absolute;
-    bottom: -18px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: var(--usco-bg-main);
-    color: var(--usco-red-primary);
-    box-shadow: 0 4px 8px color-mix(in srgb, var(--usco-text-dark) 12%, transparent);
-}
+
 
 /* Contenido visible */
 .card-visible-content {
