@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CESURCAFÉ - Centro Surcolombiano de Investigación en Café, Universidad Surcolombiana. Investigación, servicios científicos y acompañamiento a la caficultura del Huila.">
     <title>CESURCAFÉ - Centro de Estudios e Investigaciones del Café</title>
+    
+    <!-- HOJAS DE ESTILO -->
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ENLACE DE ACCESIBILIDAD -->
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <!-- TOP BAR GOV.CO — Matriz ITA 2.1: enlace al Portal Único del Estado Colombiano -->
+    <!-- CABECERA INSTITUCIONAL GOV.CO -->
     <div class="govco-topbar">
         <a href="https://www.gov.co/" target="_blank" rel="noopener">
             <span class="govco-mark" aria-hidden="true">GOV.CO</span>
@@ -20,7 +25,7 @@
         </a>
     </div>
 
-    <!-- BOTÓN FLOTANTE Y PANEL DE NAVEGACIÓN -->
+    <!-- NAVEGACIÓN FLOTANTE / MENU LATERAL -->
     <div class="floating-nav-container">
         <button class="nav-toggle-floating" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de navegación">
             <span class="nav-toggle-bars" aria-hidden="true"></span>
@@ -35,7 +40,7 @@
                     <img src="imagenes/logousco.jpg" alt="Universidad Surcolombiana" class="brand-logo usco-logo">
                     <img src="imagenes/logocesurcafe.jpg" alt="CESURCAFÉ" class="brand-logo cesurcafe-logo">
                 </a>
-                <button class="drawer-close" type="button" aria-label="Cerrar menú">✕</button>
+                <button class="drawer-close" type="button" aria-label="Cerrar menú"></button>
             </div>
             <ul class="nav-menu-list">
                 <li><a href="#inicio" class="nav-link active" aria-current="page">Inicio</a></li>
@@ -43,312 +48,312 @@
                 <li><a href="#mision-vision" class="nav-link">Misión y Visión</a></li>
                 <li><a href="#talento-humano" class="nav-link">Investigadores</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
-               
+                <li><a href="#repository" class="nav-link">Repositorio</a></li>
                 <li><a href="#alianzas" class="nav-link">Alianzas</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main id="main-content" tabindex="-1">
       
-       <!-- HERO / INICIO -->
-<section id="inicio" class="page-hero">
-    <span class="hero-eyebrow">Universidad Surcolombiana</span>
-    <h1>CESURCAFÉ</h1>
-    <p>Centro Surcolombiano de Investigación en Café</p>
-</section>
+        <!-- SECCIÓN: INICIO / HERO -->
+        <section id="inicio" class="page-hero">
+            <span class="hero-eyebrow">Universidad Surcolombiana</span>
+            <h1>CESURCAFÉ</h1>
+            <p>Centro Surcolombiano de Investigación en Café</p>
+        </section>
 
-<!-- QUIÉNES SOMOS / NUESTRAS INSTALACIONES + GANCHO A SERVICIOS -->
-<section id="quienes-somos" class="section-padding">
-    <div class="split-facility-container">
-        
-        <!-- COLUMNA IZQUIERDA: Carrusel Compacto de Instalaciones -->
-        <div class="facility-visual">
-            <div class="virtual-tour-wrapper image-carousel" aria-label="Galería de instalaciones de CESURCAFÉ">
-                <div class="carousel-track">
-                    <figure class="carousel-slide active">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1000&q=85" alt="Granos de café en un laboratorio">
-                        <figcaption class="slide-caption">Laboratorio de Análisis Físico</figcaption>
-                    </figure>
-                    <figure class="carousel-slide">
-                        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=85" alt="Preparación de café en las instalaciones">
-                        <figcaption class="slide-caption">Sala de Cata y Análisis Sensorial</figcaption>
-                    </figure>
-                    <figure class="carousel-slide">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=85" alt="Equipo para análisis y preparación de café">
-                        <figcaption class="slide-caption">Equipos de Tueste y Control Térmico</figcaption>
-                    </figure>
+        <!-- SECCIÓN: QUIÉNES SOMOS / INSTALACIONES -->
+        <section id="quienes-somos" class="section-padding">
+            <div class="split-facility-container">
+                
+                <!-- Columna Izquierda: Carrusel de Fotos -->
+                <div class="facility-visual">
+                    <div class="virtual-tour-wrapper image-carousel" aria-label="Galería de instalaciones de CESURCAFÉ">
+                        <div class="carousel-track">
+                            <figure class="carousel-slide active">
+                                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1000&q=85" alt="Granos de café en un laboratorio">
+                                <figcaption class="slide-caption">Laboratorio de Análisis Físico</figcaption>
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=85" alt="Preparación de café en las instalaciones">
+                                <figcaption class="slide-caption">Sala de Cata y Análisis Sensorial</figcaption>
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=85" alt="Equipo para análisis y preparación de café">
+                                <figcaption class="slide-caption">Equipos de Tueste y Control Térmico</figcaption>
+                            </figure>
+                        </div>
+                        <button class="carousel-control carousel-control-prev" type="button" aria-label="Imagen anterior">&#10094;</button>
+                        <button class="carousel-control carousel-control-next" type="button" aria-label="Siguiente imagen">&#10095;</button>
+                        <div class="carousel-dots" aria-label="Seleccionar imagen">
+                            <button class="carousel-dot active" type="button" aria-label="Ver imagen 1"></button>
+                            <button class="carousel-dot" type="button" aria-label="Ver imagen 2"></button>
+                            <button class="carousel-dot" type="button" aria-label="Ver imagen 3"></button>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-control carousel-control-prev" type="button" aria-label="Imagen anterior">&#10094;</button>
-                <button class="carousel-control carousel-control-next" type="button" aria-label="Siguiente imagen">&#10095;</button>
-                <div class="carousel-dots" aria-label="Seleccionar imagen">
-                    <button class="carousel-dot active" type="button" aria-label="Ver imagen 1"></button>
-                    <button class="carousel-dot" type="button" aria-label="Ver imagen 2"></button>
-                    <button class="carousel-dot" type="button" aria-label="Ver imagen 3"></button>
+
+                <!-- Columna Derecha: Información de Infraestructura -->
+                <div class="facility-content">
+                    <span class="eyebrow-text">Infraestructura Científica</span>
+                    <h2>Tecnología de Vanguardia para la Calidad de tu Café</h2>
+                    <p class="facility-lead">
+                        Contamos con laboratorios especializados de cata, tueste y análisis fisicoquímico respaldados por la Universidad Surcolombiana al servicio de productores, asociaciones y empresas de todo el país.
+                    </p>
+
+                    <div class="facility-highlights">
+                        <div class="highlight-item">
+                            <strong class="highlight-num">SCA / CVA</strong>
+                            <span>Metodologías Internacionales</span>
+                        </div>
+                        <div class="highlight-item">
+                            <strong class="highlight-num">100%</strong>
+                            <span>Cobertura Nacional</span>
+                        </div>
+                    </div>
+
+                    <div class="explore-callout">
+                        <p>¿Buscas evaluar tu lote o certificar la calidad de tu producción?</p>
+                        <a href="#servicios" class="btn-scroll-services">
+                            <span>Explorar Portafolio de Servicios</span>
+                            <svg class="bounce-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
             </div>
-        </div>
+        </section>
 
-        <!-- COLUMNA DERECHA: Gancho de Conversión (Call to Action hacia Servicios) -->
-        <div class="facility-content">
-            <span class="eyebrow-text">Infraestructura Científica</span>
-            <h2>Tecnología de Vanguardia para la Calidad de tu Café</h2>
-            <p class="facility-lead">
-                Contamos con laboratorios especializados de cata, tueste y análisis fisicoquímico respaldados por la Universidad Surcolombiana al servicio de productores, asociaciones y empresas de todo el país.
-            </p>
-
-            <!-- Cifras de Impacto / Confianza -->
-            <div class="facility-highlights">
-                <div class="highlight-item">
-                    <strong class="highlight-num">SCA / CVA</strong>
-                    <span>Metodologías Internacionales</span>
+        <!-- SECCIÓN: SERVICIOS ESPECIALIZADOS -->
+        <section id="servicios" class="services-section">
+            <div class="section-header center-text">
+                <div class="reach-badges">
+                    <span class="badge-reach national">● Cobertura Nacional</span>
+                    <span class="badge-reach international">Alianzas Internacionales</span>
                 </div>
-                <div class="highlight-item">
-                    <strong class="highlight-num">100%</strong>
-                    <span>Cobertura Nacional</span>
-                </div>
+                <h2>Nuestros Servicios Especializados</h2>
+                <p class="section-lead">
+                    Haz clic en cualquiera de nuestras líneas de servicio para desplegar la información detallada y solicitar tu atención.
+                </p>
             </div>
 
-            <!-- Botón de Invitación para Continuar Bajando -->
-            <div class="explore-callout">
-                <p>¿Buscas evaluar tu lote o certificar la calidad de tu producción?</p>
-                <a href="#servicios" class="btn-scroll-services">
-                    <span>Explorar Portafolio de Servicios</span>
-                    <svg class="bounce-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <polyline points="19 12 12 19 5 12"></polyline>
-                    </svg>
-                </a>
+            <div class="services-grid">
+
+                <!-- Tarjeta 1: Tueste de Muestras -->
+                <article class="service-expandable-card">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Tueste de Muestras" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M12 18v4M4.93 4.93l7.07 7.07M12 12l7.07 7.07M2 12h4M18 12h4M4.93 19.07l7.07-7.07M12 12l7.07-7.07"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Tueste de Muestras</h3>
+                        <p class="short-desc">Estandarización y curvas de tueste controladas para muestras de café verde.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Desarrollo de curvas de tueste para muestra física y sensorial.</li>
+                                <li>Perfiles ajustados a estándares de competición o perfil comercial.</li>
+                                <li>Empaque hermético y rotulado de muestras tostadas para envío nacional.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Tueste de Muestras">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Cata & Evaluación Sensorial -->
+                <article class="service-expandable-card highlighted">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Cata y Análisis de Calidad" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <span class="top-tag">Más Solicitado</span>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Cata & Evaluación Sensorial</h3>
+                        <p class="short-desc">Dictamen oficial del perfil de taza bajo metodologías internacionales SCA y CVA.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Ficha técnica con puntuación organoléptica detallada.</li>
+                                <li>Descriptor de notas (fragancia, aroma, acidez, cuerpo, dulzor y posgusto).</li>
+                                <li>Detección e informe de defectos e inconsistencias en la taza.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Cata y Evaluación Sensorial">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Análisis Físico de Grano -->
+                <article class="service-expandable-card">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80" alt="Análisis Físico" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Análisis Físico del Grano</h3>
+                        <p class="short-desc">Determinación cuantitativa de humedad, rendimiento y granulometría del lote.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Medición de humedad y actividad de agua ($a_w$).</li>
+                                <li>Clasificación por malla (malla/granulometría) y cálculo de factor de rendimiento.</li>
+                                <li>Reporte de pasilla, almendra sana e impurezas físicas.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Análisis Físico del Grano">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4: Auditorías y Juzgamiento en Eventos -->
+                <article class="service-expandable-card">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="Auditoría y juzgamiento en eventos cafeteros" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/><path d="M12 3v3M3 12h3M18 12h3"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Auditorías en Eventos</h3>
+                        <p class="short-desc">Acompañamiento técnico e imparcial para concursos, ferias, subastas y jornadas de evaluación de café.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Auditoría de mesas, procesos de evaluación y resultados.</li>
+                                <li>Jueces, calibradores y acompañamiento especializado.</li>
+                                <li>Apoyo en concursos, ferias, subastas y eventos institucionales.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Auditorías en Eventos">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5: Análisis Fisicoquímicos -->
+                <article class="service-expandable-card">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Análisis fisicoquímico de café" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.5M14 2v7.5M8.5 2h7M14 9.5a4.5 4.5 0 1 1-4 0"/><path d="M7 21h10"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Análisis Fisicoquímicos</h3>
+                        <p class="short-desc">Pruebas de laboratorio definidas según las características del producto y las necesidades de cada proyecto.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Selección de pruebas según el objetivo del análisis.</li>
+                                <li>Medición de variables fisicoquímicas y de calidad.</li>
+                                <li>Interpretación de resultados y reporte técnico.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Análisis Fisicoquímicos">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6: Asesoramiento -->
+                <article class="service-expandable-card">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Asesoramiento técnico para productores de café" class="card-bg-image">
+                        <div class="image-overlay"></div>
+                        <div class="service-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-1.1.8-1.7 1.2-1.7 2.7"/><path d="M12 17h.01"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="card-visible-content">
+                        <h3>Asesoramiento Técnico</h3>
+                        <p class="short-desc">Orientación especializada para resolver necesidades de calidad, procesos y comercialización del café.</p>
+                        <button class="toggle-expand-btn" type="button">
+                            <span>Ver detalles del servicio</span>
+                            <span class="arrow-icon">↓</span>
+                        </button>
+                    </div>
+
+                    <div class="card-hidden-content">
+                        <div class="details-inner">
+                            <h4>¿Qué incluye este servicio?</h4>
+                            <ul class="service-checklist">
+                                <li>Diagnóstico de necesidades y definición de objetivos.</li>
+                                <li>Recomendaciones para procesos en finca y laboratorio.</li>
+                                <li>Acompañamiento en proyectos de investigación aplicada.</li>
+                            </ul>
+                            <a href="#contacto" class="btn-contact-service" data-service="Asesoramiento Técnico">
+                                Contactar para este servicio &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
-
-        
-<section id="servicios" class="services-section">
-    <div class="section-header center-text">
-        <div class="reach-badges">
-            <span class="badge-reach national">● Cobertura Nacional</span>
-            <span class="badge-reach international">✦ Alianzas Internacionales</span>
-        </div>
-        <h2>Nuestros Servicios Especializados</h2>
-        <p class="section-lead">
-            Haz clic en cualquiera de nuestras líneas de servicio para desplegar la información detallada y solicitar tu atención.
-        </p>
-    </div>
-
-    <div class="services-grid">
-
-        <!-- TARJETA 1: Tueste de Muestras -->
-        <article class="service-expandable-card">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Tueste de Muestras" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M12 18v4M4.93 4.93l7.07 7.07M12 12l7.07 7.07M2 12h4M18 12h4M4.93 19.07l7.07-7.07M12 12l7.07-7.07"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Tueste de Muestras</h3>
-                <p class="short-desc">Estandarización y curvas de tueste controladas para muestras de café verde.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Desarrollo de curvas de tueste para muestra física y sensorial.</li>
-                        <li>Perfiles ajustados a estándares de competición o perfil comercial.</li>
-                        <li>Empaque hermético y rotulado de muestras tostadas para envío nacional.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Tueste de Muestras">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- TARJETA 2: Cata & Evaluación Sensorial -->
-        <article class="service-expandable-card highlighted">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Cata y Análisis de Calidad" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <span class="top-tag">Más Solicitado</span>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Cata & Evaluación Sensorial</h3>
-                <p class="short-desc">Dictamen oficial del perfil de taza bajo metodologías internacionales SCA y CVA.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Ficha técnica con puntuación organoléptica detallada.</li>
-                        <li>Descriptor de notas (fragancia, aroma, acidez, cuerpo, dulzor y posgusto).</li>
-                        <li>Detección e informe de defectos e inconsistencias en la taza.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Cata y Evaluación Sensorial">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- TARJETA 3: Análisis Físico de Grano -->
-        <article class="service-expandable-card">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80" alt="Análisis Físico" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Análisis Físico del Grano</h3>
-                <p class="short-desc">Determinación cuantitativa de humedad, rendimiento y granulometría del lote.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Medición de humedad y actividad de agua ($a_w$).</li>
-                        <li>Clasificación por malla (malla/granulometría) y cálculo de factor de rendimiento.</li>
-                        <li>Reporte de pasilla, almendra sana e impurezas físicas.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Análisis Físico del Grano">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- TARJETA 4: Auditorías y Juzgamiento en Eventos -->
-        <article class="service-expandable-card">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="Auditoría y juzgamiento en eventos cafeteros" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/><path d="M12 3v3M3 12h3M18 12h3"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Auditorías en Eventos</h3>
-                <p class="short-desc">Acompañamiento técnico e imparcial para concursos, ferias, subastas y jornadas de evaluación de café.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Auditoría de mesas, procesos de evaluación y resultados.</li>
-                        <li>Jueces, calibradores y acompañamiento especializado.</li>
-                        <li>Apoyo en concursos, ferias, subastas y eventos institucionales.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Auditorías en Eventos">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- TARJETA 5: Análisis Fisicoquímicos -->
-        <article class="service-expandable-card">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Análisis fisicoquímico de café" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.5M14 2v7.5M8.5 2h7M14 9.5a4.5 4.5 0 1 1-4 0"/><path d="M7 21h10"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Análisis Fisicoquímicos</h3>
-                <p class="short-desc">Pruebas de laboratorio definidas según las características del producto y las necesidades de cada proyecto.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Selección de pruebas según el objetivo del análisis.</li>
-                        <li>Medición de variables fisicoquímicas y de calidad.</li>
-                        <li>Interpretación de resultados y reporte técnico.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Análisis Fisicoquímicos">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- TARJETA 6: Asesoramiento -->
-        <article class="service-expandable-card">
-            <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Asesoramiento técnico para productores de café" class="card-bg-image">
-                <div class="image-overlay"></div>
-                <div class="service-icon-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-1.1.8-1.7 1.2-1.7 2.7"/><path d="M12 17h.01"/></svg>
-                </div>
-            </div>
-
-            <div class="card-visible-content">
-                <h3>Asesoramiento Técnico</h3>
-                <p class="short-desc">Orientación especializada para resolver necesidades de calidad, procesos y comercialización del café.</p>
-                <button class="toggle-expand-btn" type="button">
-                    <span>Ver detalles del servicio</span>
-                    <span class="arrow-icon">↓</span>
-                </button>
-            </div>
-
-            <div class="card-hidden-content">
-                <div class="details-inner">
-                    <h4>¿Qué incluye este servicio?</h4>
-                    <ul class="service-checklist">
-                        <li>Diagnóstico de necesidades y definición de objetivos.</li>
-                        <li>Recomendaciones para procesos en finca y laboratorio.</li>
-                        <li>Acompañamiento en proyectos de investigación aplicada.</li>
-                    </ul>
-                    <a href="#contacto" class="btn-contact-service" data-service="Asesoramiento Técnico">
-                        Contactar para este servicio &rarr;
-                    </a>
-                </div>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-
-      <!-- MISIÓN Y VISIÓN -->
+        <!-- SECCIÓN: MISIÓN Y VISIÓN -->
         <section id="mision-vision" class="mission-vision-section">
             <div class="section-header center-text">
                 <span class="eyebrow-text light-eyebrow">Nuestro Propósito</span>
@@ -369,340 +374,445 @@
             </div>
         </section>
 
-
-<!-- TALENTO HUMANO (INVESTIGADORES Y ADMINISTRATIVOS) -->
-<section id="talento-humano" class="team-section">
-    <div class="section-header center-text">
-        <span class="eyebrow-text">CESURCAFÉ - USCO</span>
-        <h2>Talento Humano</h2>
-        <p>Equipo docente, investigador y administrativo comprometido con la cadena de valor del café.</p>
-    </div>
-
-   
-
-    <div class="team-grid">
-
-        <!-- CARD 1: Dr. Nelson Gutiérrez Guzmán -->
-        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-nelson" role="button" tabindex="0">
-            <div class="investigator-photo-wrap">
-                <img class="investigator-photo" src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán">
-                <span class="availability-badge" title="Activo">●</span>
+        <!-- SECCIÓN: TALENTO HUMANO -->
+        <section id="talento-humano" class="team-section">
+            <div class="section-header center-text">
+                <span class="eyebrow-text">CESURCAFÉ - USCO</span>
+                <h2>Talento Humano</h2>
+                <p>Equipo docente, investigador y administrativo comprometido con la cadena de valor del café.</p>
             </div>
-            
-            <h3>Dr. Nelson Gutiérrez Guzmán</h3>
-            <p class="investigator-role">Director & Investigador Principal</p>
-            <span class="specialty-tag">Investigador & Docente</span>
 
-            <div class="investigator-stats">
-                <div class="stat-item">
-                    <strong>Doctorado</strong>
-                    <span>Nivel Educativo</span>
+            <div class="team-grid">
+
+                <!-- Integrante 1 -->
+                <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-nelson" role="button" tabindex="0">
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán">
+                        <span class="availability-badge" title="Activo">●</span>
+                    </div>
+                    
+                    <h3>Dr. Nelson Gutiérrez Guzmán</h3>
+                    <p class="investigator-role">Director & Investigador Principal</p>
+                    <span class="specialty-tag">Investigador & Docente</span>
+
+                    <div class="investigator-stats">
+                        <div class="stat-item">
+                            <strong>Doctorado</strong>
+                            <span>Nivel Educativo</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>ORCID</strong>
+                            <span>Perfil Científico</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer-action">
+                        <span>Ver perfil completo &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Integrante 2 -->
+                <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-pilar" role="button" tabindex="0">
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona">
+                        <span class="availability-badge" title="Activo">●</span>
+                    </div>
+
+                    <h3>Ing. María del Pilar Cortés Gaona</h3>
+                    <p class="investigator-role">Coordinadora del Centro & Investigadora</p>
+                    <span class="specialty-tag">Investigadora</span>
+
+                    <div class="investigator-stats">
+                        <div class="stat-item">
+                            <strong>Ingeniería</strong>
+                            <span>Nivel Educativo</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>ORCID</strong>
+                            <span>Perfil Científico</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer-action">
+                        <span>Ver perfil completo &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Integrante 3 -->
+                <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-juan" role="button" tabindex="0">
+                    <div class="investigator-photo-wrap">
+                        <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora">
+                        <span class="availability-badge" title="Activo">●</span>
+                    </div>
+
+                    <h3>Ing. Juan E. S. Mora</h3>
+                    <p class="investigator-role">Investigador & Auxiliar de Investigación</p>
+                    <span class="specialty-tag">Investigador & Docente</span>
+
+                    <div class="investigator-stats">
+                        <div class="stat-item">
+                            <strong>Maestría</strong>
+                            <span>Nivel Educativo</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>ORCID</strong>
+                            <span>Perfil Científico</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer-action">
+                        <span>Ver perfil completo &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Integrante 4 -->
+                <article class="investigator-card card-trigger" data-category="administrativo" data-target="modal-miguel" role="button" tabindex="0">
+                    <div class="investigator-photo-wrap">
+                        <div class="investigator-photo photo-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <span class="availability-badge" title="Activo">●</span>
+                    </div>
+
+                    <h3>Lic. Miguel Alberto Fiorillo</h3>
+                    <p class="investigator-role">Gestión Administrativa</p>
+                    <span class="specialty-tag admin-tag">Administrativo</span>
+
+                    <div class="investigator-stats">
+                        <div class="stat-item">
+                            <strong>Licenciatura</strong>
+                            <span>Nivel Educativo</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>LinkedIn</strong>
+                            <span>Perfil Profesional</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer-action">
+                        <span>Ver perfil completo &rarr;</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- VENTANAS MODALES DE INVESTIGADORES -->
+        <div class="modal-backdrop" id="modal-backdrop">
+
+            <!-- Modal 1: Dr. Nelson Gutiérrez Guzmán -->
+            <div class="modal-box" id="modal-nelson">
+                <button class="modal-close-btn">&times;</button>
+                <div class="modal-header-profile">
+                    <img src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán" class="modal-photo">
+                    <div>
+                        <h2>Dr. Nelson Gutiérrez Guzmán</h2>
+                        <p class="modal-subtitle">Director CESURCAFÉ & Investigador Principal</p>
+                        <a href="https://orcid.org/0000-0002-3909-5883" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <strong>ORCID</strong>
-                    <span>Perfil Científico</span>
+                <div class="modal-body-content">
+                    <h4>Perfil Profesional</h4>
+                    <p>Ingeniero Agrícola por la Universidad Surcolombiana y Doctor en Tecnología de Alimentos por la Universidad Politécnica de Valencia. Par evaluador Minciencias con amplia trayectoria en calidad de café e inocuidad agroalimentaria.</p>
+
+                    <h4>Formación Académica</h4>
+                    <ul>
+                        <li><strong>Doctorado en Tecnología de Alimentos:</strong> Univ. Politécnica de Valencia (Cum Laude, 2008).</li>
+                        <li><strong>Maestría en Ciencia e Ing. de Alimentos:</strong> Univ. Politécnica de Valencia (2002).</li>
+                        <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (1991).</li>
+                    </ul>
+
+                    <h4>Publicaciones & Proyectos Destacados</h4>
+                    <p>Coautor e Investigador Principal en proyectos financiados por SGR y Minciencias focalizados en transferencia tecnológica y poscosecha de café en el departamento del Huila.</p>
                 </div>
             </div>
 
-            <div class="card-footer-action">
-                <span>Ver perfil completo &rarr;</span>
-            </div>
-        </article>
-
-        <!-- CARD 2: Ing. María del Pilar Cortés Gaona -->
-        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-pilar" role="button" tabindex="0">
-            <div class="investigator-photo-wrap">
-                <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona">
-                <span class="availability-badge" title="Activo">●</span>
-            </div>
-
-            <h3>Ing. María del Pilar Cortés Gaona</h3>
-            <p class="investigator-role">Coordinadora del Centro & Investigadora</p>
-            <span class="specialty-tag">Investigadora</span>
-
-            <div class="investigator-stats">
-                <div class="stat-item">
-                    <strong>Ingeniería</strong>
-                    <span>Nivel Educativo</span>
+            <!-- Modal 2: Ing. María del Pilar Cortés Gaona -->
+            <div class="modal-box" id="modal-pilar">
+                <button class="modal-close-btn">&times;</button>
+                <div class="modal-header-profile">
+                    <img src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona" class="modal-photo">
+                    <div>
+                        <h2>Ing. María del Pilar Cortés Gaona</h2>
+                        <p class="modal-subtitle">Coordinadora del Centro CESURCAFÉ</p>
+                        <a href="https://orcid.org/0000-0001-7654-3659" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <strong>ORCID</strong>
-                    <span>Perfil Científico</span>
-                </div>
-            </div>
+                <div class="modal-body-content">
+                    <h4>Perfil Profesional</h4>
+                    <p>Ingeniera Agrícola vinculada a CESURCAFÉ como coordinadora operativa e investigadora en proyectos de fermentación controlada y análisis sensorial del café.</p>
 
-            <div class="card-footer-action">
-                <span>Ver perfil completo &rarr;</span>
-            </div>
-        </article>
+                    <h4>Formación Académica</h4>
+                    <ul>
+                        <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2015 - 2019).</li>
+                    </ul>
 
-        <!-- CARD 3: Ing. Juan Esteban Sanabria Mora -->
-        <article class="investigator-card card-trigger" data-category="investigador" data-target="modal-juan" role="button" tabindex="0">
-            <div class="investigator-photo-wrap">
-                <img class="investigator-photo" src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora">
-                <span class="availability-badge" title="Activo">●</span>
-            </div>
-
-            <h3>Ing. Juan E. S. Mora</h3>
-            <p class="investigator-role">Investigador & Auxiliar de Investigación</p>
-            <span class="specialty-tag">Investigador & Docente</span>
-
-            <div class="investigator-stats">
-                <div class="stat-item">
-                    <strong>Maestría</strong>
-                    <span>Nivel Educativo</span>
-                </div>
-                <div class="stat-item">
-                    <strong>ORCID</strong>
-                    <span>Perfil Científico</span>
+                    <h4>Publicaciones & Trabajos Recientes</h4>
+                    <p><strong>Effect of Coffee Fermentation with Candida sphaerica and Lactiplantibacillus plantarum on the Development of Sensory Characteristics</strong><br>
+                    <em>Revista Politécnica (2026).</em> Coautora junto a Claudia Amorocho-Cruz, Maria Paula Quevedo Villamil y Nelson Gutiérrez-Guzmán.</p>
                 </div>
             </div>
 
-            <div class="card-footer-action">
-                <span>Ver perfil completo &rarr;</span>
-            </div>
-        </article>
-
-        <!-- CARD 4: Lic. Miguel Alberto Fiorillo -->
-        <article class="investigator-card card-trigger" data-category="administrativo" data-target="modal-miguel" role="button" tabindex="0">
-            <div class="investigator-photo-wrap">
-                <div class="investigator-photo photo-placeholder">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <!-- Modal 3: Ing. Juan Esteban Sanabria Mora -->
+            <div class="modal-box" id="modal-juan">
+                <button class="modal-close-btn">&times;</button>
+                <div class="modal-header-profile">
+                    <img src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora" class="modal-photo">
+                    <div>
+                        <h2>Ing. Juan Esteban Sanabria Mora</h2>
+                        <p class="modal-subtitle">Investigador & Auxiliar de Investigación</p>
+                        <a href="https://orcid.org/0000-0001-5079-7968" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+                    </div>
                 </div>
-                <span class="availability-badge" title="Activo">●</span>
-            </div>
+                <div class="modal-body-content">
+                    <h4>Perfil Profesional</h4>
+                    <p>Ingeniero Agrícola por la Universidad Surcolombiana (2020) y Auxiliar de Investigación en CESURCAFÉ. Becario CAPES BRA cursando la Maestría en Ciencia de los Alimentos en la Universidad Federal de Lavras (UFLA, Brasil).</p>
 
-            <h3>Lic. Miguel Alberto Fiorillo</h3>
-            <p class="investigator-role">Gestión Administrativa</p>
-            <span class="specialty-tag admin-tag">Administrativo</span>
+                    <h4>Formación Académica</h4>
+                    <ul>
+                        <li><strong>Maestría en Ciencia de los Alimentos (En curso):</strong> Universidad Federal de Lavras (Brasil).</li>
+                        <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2020).</li>
+                    </ul>
 
-            <div class="investigator-stats">
-                <div class="stat-item">
-                    <strong>Licenciatura</strong>
-                    <span>Nivel Educativo</span>
-                </div>
-                <div class="stat-item">
-                    <strong>LinkedIn</strong>
-                    <span>Perfil Profesional</span>
+                    <h4>Áreas de Especialización</h4>
+                    <p>Análisis sensorial, tecnología de alimentos y procesos de fermentación poscosecha en café.</p>
                 </div>
             </div>
 
-            <div class="card-footer-action">
-                <span>Ver perfil completo &rarr;</span>
+            <!-- Modal 4: Lic. Miguel Alberto Fiorillo -->
+            <div class="modal-box" id="modal-miguel">
+                <button class="modal-close-btn">&times;</button>
+                <div class="modal-header-profile">
+                    <div class="modal-photo photo-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <div>
+                        <h2>Lic. Miguel Alberto Fiorillo</h2>
+                        <p class="modal-subtitle">Gestión Administrativa</p>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="badge-tag link-tag admin-link">Ver Perfil LinkedIn ↗</a>
+                    </div>
+                </div>
+                <div class="modal-body-content">
+                    <h4>Perfil Profesional</h4>
+                    <p>Profesional encargado del soporte administrativo, logístico y operativo para los proyectos, convenios y gestión documental dentro del Centro CESURCAFÉ.</p>
+
+                    <h4>Formación Académica</h4>
+                    <ul>
+                        <li><strong>Licenciatura / Formación Profesional:</strong> Universidad Surcolombiana.</li>
+                    </ul>
+
+                    <h4>Coordinación & Contacto</h4>
+                    <p>Atención e información institucional: <code>cesurcafe@usco.edu.co</code></p>
+                </div>
             </div>
-        </article>
 
-    </div>
-</section>
-
-<!-- MODALES HOMOGÉNEOS CON ESTRUCTURA UNIFICADA -->
-<div class="modal-backdrop" id="modal-backdrop">
-
-    <!-- MODAL 1: NELSON GUTIÉRREZ GUZMÁN -->
-    <div class="modal-box" id="modal-nelson">
-        <button class="modal-close-btn">&times;</button>
-        <div class="modal-header-profile">
-            <img src="https://www.grupopaca.edu.co/images/profesores/doctorado/nelsongudoc.jpg" alt="Dr. Nelson Gutiérrez Guzmán" class="modal-photo">
-            <div>
-
-            </section>
-                <h2>Dr. Nelson Gutiérrez Guzmán</h2>
-                <p class="modal-subtitle">Director CESURCAFÉ & Investigador Principal</p>
-                <a href="https://orcid.org/0000-0002-3909-5883" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
-            </div>
         </div>
-        <div class="modal-body-content">
-            <h4>Perfil Profesional</h4>
-            <p>Ingeniero Agrícola por la Universidad Surcolombiana y Doctor en Tecnología de Alimentos por la Universidad Politécnica de Valencia. Par evaluador Minciencias con amplia trayectoria en calidad de café e inocuidad agroalimentaria.</p>
 
-            <h4>Formación Académica</h4>
-            <ul>
-                <li><strong>Doctorado en Tecnología de Alimentos:</strong> Univ. Politécnica de Valencia (Cum Laude, 2008).</li>
-                <li><strong>Maestría en Ciencia e Ing. de Alimentos:</strong> Univ. Politécnica de Valencia (2002).</li>
-                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (1991).</li>
-            </ul>
-
-            <h4>Publicaciones & Proyectos Destacados</h4>
-            <p>Coautor e Investigador Principal en proyectos financiados por SGR y Minciencias focalizados en transferencia tecnológica y poscosecha de café en el departamento del Huila.</p>
-        </div>
-    </div>
-
-    <!-- MODAL 2: MARÍA DEL PILAR CORTÉS GAONA -->
-    <div class="modal-box" id="modal-pilar">
-        <button class="modal-close-btn">&times;</button>
-        <div class="modal-header-profile">
-            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEeu4cLNMhR4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587227744796?e=2147483647&v=beta&t=yrL54NjvyR_Tv390cyEU8p7NESexPiHzSiqq0g_Lt1A" alt="Ing. María del Pilar Cortés Gaona" class="modal-photo">
-            <div>
-                <h2>Ing. María del Pilar Cortés Gaona</h2>
-                <p class="modal-subtitle">Coordinadora del Centro CESURCAFÉ</p>
-                <a href="https://orcid.org/0000-0001-7654-3659" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+        <!-- SECCIÓN: TESTIMONIOS E IMPACTO (CARRUSEL SPLIDE) -->
+        <section class="testimonials-section section-padding" aria-label="Impacto en los Productores">
+            <div class="section-header center-text">
+                <span class="eyebrow-text">Comunidad</span>
+                <h2>Impacto en los Productores</h2>
+                <p>Conoce algunas experiencias de quienes han trabajado junto a CESURCAFÉ.</p>
             </div>
-        </div>
-        <div class="modal-body-content">
-            <h4>Perfil Profesional</h4>
-            <p>Ingeniera Agrícola vinculada a CESURCAFÉ como coordinadora operativa e investigadora en proyectos de fermentación controlada y análisis sensorial del café.</p>
 
-            <h4>Formación Académica</h4>
-            <ul>
-                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2015 - 2019).</li>
-            </ul>
+            <div id="testimonials-carousel" class="splide" aria-label="Carrusel de proyectos e investigación de CESURCAFÉ">
+                <div class="splide__track">
+                    <ul class="splide__list">
 
-            <h4>Publicaciones & Trabajos Recientes</h4>
-            <p><strong>Effect of Coffee Fermentation with Candida sphaerica and Lactiplantibacillus plantarum on the Development of Sensory Characteristics</strong><br>
-            <em>Revista Politécnica (2026).</em> Coautora junto a Claudia Amorocho-Cruz, Maria Paula Quevedo Villamil y Nelson Gutiérrez-Guzmán.</p>
-        </div>
-    </div>
+                        <!-- Tarjeta 1 -->
+                        <li class="splide__slide">
+                            <article class="slide-card">
+                                <div class="card-preview">
+                                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Secado solar de café en El Pital">
+                                    <span class="preview-label">Energía Renovable</span>
+                                </div>
+                                <div class="card-info">
+                                    <h3><span class="arrow" aria-hidden="true">↘</span> Proyecto Piloto El Pital</h3>
+                                    <p>Investigación junto a ZHAW para transformar pulpa de café y residuos orgánicos en energía para el secado solar en la finca La Ceja.</p>
+                                </div>
+                            </article>
+                        </li>
 
-    <!-- MODAL 3: JUAN ESTEBAN SANABRIA MORA -->
-    <div class="modal-box" id="modal-juan">
-        <button class="modal-close-btn">&times;</button>
-        <div class="modal-header-profile">
-            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEPY6iukFQJoQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650970631510?e=2147483647&v=beta&t=TdhVPOp14ahlgu2jnlvd4eXAnjINm6KCuVyDKkxuEw0" alt="Ing. Juan Esteban Sanabria Mora" class="modal-photo">
-            <div>
-                <h2>Ing. Juan Esteban Sanabria Mora</h2>
-                <p class="modal-subtitle">Investigador & Auxiliar de Investigación</p>
-                <a href="https://orcid.org/0000-0001-5079-7968" target="_blank" rel="noopener" class="badge-tag link-tag">Ver Registro ORCID ↗</a>
+                        <!-- Tarjeta 2 -->
+                        <li class="splide__slide">
+                            <article class="slide-card dark-variant">
+                                <div class="card-preview">
+                                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Análisis físico y sensorial de café verde">
+                                    <span class="preview-label">Investigación SCA</span>
+                                </div>
+                                <div class="card-info">
+                                    <h3><span class="arrow" aria-hidden="true">↘</span> Ciencia del Café Verde</h3>
+                                    <p>Estudio de vanguardia con SCA, Coffee Science Foundation y ZHAW correlacionando defectos físicos con su impacto sensorial en taza.</p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Tarjeta 3 -->
+                        <li class="splide__slide">
+                            <article class="slide-card">
+                                <div class="card-preview">
+                                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Auditoría de microlotes de café">
+                                    <span class="preview-label">Auditoría Técnica</span>
+                                </div>
+                                <div class="card-info">
+                                    <h3><span class="arrow" aria-hidden="true">↘</span> Concurso de Microlotes</h3>
+                                    <p>Acompañamiento e inspección de procesos de calidad junto a Cuatro Vientos para garantizar transparencia y premiar la excelencia.</p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Tarjeta 4 -->
+                        <li class="splide__slide">
+                            <article class="slide-card dark-variant">
+                                <div class="card-preview">
+                                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80" alt="Monitoreo térmico de fermentación de café">
+                                    <span class="preview-label">Biotecnología</span>
+                                </div>
+                                <div class="card-info">
+                                    <h3><span class="arrow" aria-hidden="true">↘</span> Control de Fermentación</h3>
+                                    <p>Desarrollo de modelos de perfilación térmica e instrumentalización para estandarizar procesos fermentativos en fincas del Huila.</p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <!-- Tarjeta 5 -->
+                        <li class="splide__slide">
+                            <article class="slide-card">
+                                <div class="card-preview">
+                                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" alt="Sesión de cata bajo protocolo CVA">
+                                    <span class="preview-label">Análisis Sensorial</span>
+                                </div>
+                                <div class="card-info">
+                                    <h3><span class="arrow" aria-hidden="true">↘</span> Evaluación CVA</h3>
+                                    <p>Implementación del protocolo Coffee Value Assessment para la caracterización precisa de perfiles diferenciados de exportación.</p>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
+        </section>
+<!-- SECCIÓN: REPOSITORIO DE INVESTIGACIONES -->
+<section id="repository" class="container repo-section">
+    <div class="repo-header d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">Repositorio de Investigaciones</h2>
+            <p class="text-muted mb-0">Publicaciones científicas, artículos y trabajos de grado institucionales.</p>
         </div>
-        <div class="modal-body-content">
-            <h4>Perfil Profesional</h4>
-            <p>Ingeniero Agrícola por la Universidad Surcolombiana (2020) y Auxiliar de Investigación en CESURCAFÉ. Becario CAPES BRA cursando la Maestría en Ciencia de los Alimentos en la Universidad Federal de Lavras (UFLA, Brasil).</p>
-
-            <h4>Formación Académica</h4>
-            <ul>
-                <li><strong>Maestría en Ciencia de los Alimentos (En curso):</strong> Universidad Federal de Lavras (Brasil).</li>
-                <li><strong>Ingeniería Agrícola:</strong> Universidad Surcolombiana (2020).</li>
-            </ul>
-
-            <h4>Áreas de Especialización</h4>
-            <p>Análisis sensorial, tecnología de alimentos y procesos de fermentación poscosecha en café.</p>
-        </div>
-    </div>
-
-    <!-- MODAL 4: MIGUEL ALBERTO FIORILLO -->
-    <div class="modal-box" id="modal-miguel">
-        <button class="modal-close-btn">&times;</button>
-        <div class="modal-header-profile">
-            <div class="modal-photo photo-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </div>
-            <div>
-                <h2>Lic. Miguel Alberto Fiorillo</h2>
-                <p class="modal-subtitle">Gestión Administrativa</p>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="badge-tag link-tag admin-link">Ver Perfil LinkedIn ↗</a>
-            </div>
-        </div>
-        <div class="modal-body-content">
-            <h4>Perfil Profesional</h4>
-            <p>Profesional encargado del soporte administrativo, logístico y operativo para los proyectos, convenios y gestión documental dentro del Centro CESURCAFÉ.</p>
-
-            <h4>Formación Académica</h4>
-            <ul>
-                <li><strong>Licenciatura / Formación Profesional:</strong> Universidad Surcolombiana.</li>
-            </ul>
-
-            <h4>Coordinación & Contacto</h4>
-            <p>Atención e información institucional: <code>cesurcafe@usco.edu.co</code></p>
-        </div>
-    </div>
-
-</div>
-
         
-
-<!-- TESTIMONIOS (CARRUSEL SPLIDE) -->
-<section class="testimonials-section section-padding" aria-label="Impacto en los Productores">
-    <div class="section-header center-text">
-        <span class="eyebrow-text">Comunidad</span>
-        <h2>Impacto en los Productores</h2>
-        <p>Conoce algunas experiencias de quienes han trabajado junto a CESURCAFÉ.</p>
+        <!-- Botón Filtro con Menú Desplegable de Bootstrap -->
+        <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-funnel-fill me-1"></i> <span id="currentFilterText">Todos</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="filterDropdown">
+                <li><a class="dropdown-item filter-opt active" href="#" data-filter="all">Todos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item filter-opt" href="#" data-filter="usco">USCO / CESURCAFÉ</a></li>
+                <li><a class="dropdown-item filter-opt" href="#" data-filter="journals">Revistas / Journals</a></li>
+            </ul>
+        </div>
     </div>
 
-   <!-- Estructura de Splide / Impacto e Investigación CESURCAFÉ -->
-<div id="testimonials-carousel" class="splide" aria-label="Carrusel de proyectos e investigación de CESURCAFÉ">
-    
-    <div class="splide__track">
-        <ul class="splide__list">
+    <!-- Grilla de Tarjetas -->
+    <div class="repo-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-            <!-- Tarjeta 1: Piloto de Secado Solar y Energía Renovable (El Pital) -->
-            <li class="splide__slide">
-                <article class="slide-card">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Secado solar de café en El Pital">
-                        <span class="preview-label">Energía Renovable</span>
+        <!-- Tarjeta 1: USCO -->
+        <div class="col repo-card-item" data-category="usco">
+            <div class="card h-100 card-article shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge badge-institution">USCO / CESURCAFÉ</span>
+                        <small class="text-muted"><i class="bi bi-calendar3"></i> 2021</small>
                     </div>
-                    <div class="card-info">
-                        <h3><span class="arrow" aria-hidden="true">↘</span> Proyecto Piloto El Pital</h3>
-                        <p>Investigación junto a ZHAW para transformar pulpa de café y residuos orgánicos en energía para el secado solar en la finca La Ceja.</p>
-                    </div>
-                </article>
-            </li>
+                    
+                    <h5 class="card-title text-primary fw-semibold mb-2">
+                        Análisis del discurso en la gestión de proyectos: caso CESURCAFÉ
+                    </h5>
+                    
+                    <p class="card-subtitle text-muted fs-7 mb-3">
+                        <i class="bi bi-people-fill me-1"></i> Biblioteca Universidad Surcolombiana
+                    </p>
+                    
+                    <p class="card-text text-secondary text-truncate-3 flex-grow-1">
+                        Estudio enfocado en las dinámicas del lenguaje y la gestión organizacional en los proyectos de desarrollo e investigación desarrollados por el Centro Surcolombiano de Investigación en Café (CESURCAFÉ)...
+                    </p>
 
-            <!-- Tarjeta 2: Clasificación Científica de Café Verde (SCA & Coffee Science Foundation) -->
-            <li class="splide__slide">
-                <article class="slide-card dark-variant">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Análisis físico y sensorial de café verde">
-                        <span class="preview-label">Investigación SCA</span>
+                    <div class="mt-3 pt-3 border-top d-flex justify-content-end align-items-center">
+                        <a href="https://biblioteca.usco.edu.co" target="_blank" rel="noopener" class="btn btn-sm btn-danger">
+                            <i class="bi bi-box-arrow-up-right me-1"></i> Catálogo USCO
+                        </a>
                     </div>
-                    <div class="card-info">
-                        <h3><span class="arrow" aria-hidden="true">↘</span> Ciencia del Café Verde</h3>
-                        <p>Estudio de vanguardia con SCA, Coffee Science Foundation y ZHAW correlacionando defectos físicos con su impacto sensorial en taza.</p>
-                    </div>
-                </article>
-            </li>
+                </div>
+            </div>
+        </div>
 
-            <!-- Tarjeta 3: Auditoría Técnica e Integridad en Concursos (Cuatro Vientos) -->
-            <li class="splide__slide">
-                <article class="slide-card">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Auditoría de microlotes de café">
-                        <span class="preview-label">Auditoría Técnica</span>
+        <!-- Tarjeta 2: Wiley -->
+        <div class="col repo-card-item" data-category="journals">
+            <div class="card h-100 card-article shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-dark">Journal of Sensory Studies</span>
+                        <small class="text-muted"><i class="bi bi-calendar3"></i> Wiley</small>
                     </div>
-                    <div class="card-info">
-                        <h3><span class="arrow" aria-hidden="true">↘</span> Concurso de Microlotes</h3>
-                        <p>Acompañamiento e inspección de procesos de calidad junto a Cuatro Vientos para garantizar transparencia y premiar la excelencia.</p>
-                    </div>
-                </article>
-            </li>
+                    
+                    <h5 class="card-title text-primary fw-semibold mb-2">
+                        Sensory Evaluation and Descriptive Profiling Standards
+                    </h5>
+                    
+                    <p class="card-subtitle text-muted fs-7 mb-3">
+                        <i class="bi bi-journal-text me-1"></i> DOI: 10.1111/joss.12104
+                    </p>
+                    
+                    <p class="card-text text-secondary text-truncate-3 flex-grow-1">
+                        Investigación en metodologías de análisis sensorial para la evaluación descriptiva de atributos organolépticos y consistencia en paneles de catación especializados...
+                    </p>
 
-            <!-- Tarjeta 4: Modelado de Fermentación y Control Térmico -->
-            <li class="splide__slide">
-                <article class="slide-card dark-variant">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80" alt="Monitoreo térmico de fermentación de café">
-                        <span class="preview-label">Biotecnología</span>
+                    <div class="mt-3 pt-3 border-top d-flex justify-content-end align-items-center">
+                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/joss.12104" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                            <i class="bi bi-journal-bookmark me-1"></i> Fuente Oficial
+                        </a>
                     </div>
-                    <div class="card-info">
-                        <h3><span class="arrow" aria-hidden="true">↘</span> Control de Fermentación</h3>
-                        <p>Desarrollo de modelos de perfilación térmica e instrumentalización para estandarizar procesos fermentativos en fincas del Huila.</p>
-                    </div>
-                </article>
-            </li>
+                </div>
+            </div>
+        </div>
 
-            <!-- Tarjeta 5: Evaluación Sensorial CVA & Capacitación Técnica -->
-            <li class="splide__slide">
-                <article class="slide-card">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" alt="Sesión de cata bajo protocolo CVA">
-                        <span class="preview-label">Análisis Sensorial</span>
+        <!-- Tarjeta 3: Trends in Food Science -->
+        <div class="col repo-card-item" data-category="journals">
+            <div class="card h-100 card-article shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-dark">Trends in Food Science &amp; Technology</span>
+                        <small class="text-muted"><i class="bi bi-calendar3"></i> 2022</small>
                     </div>
-                    <div class="card-info">
-                        <h3><span class="arrow" aria-hidden="true">↘</span> Evaluación CVA</h3>
-                        <p>Implementación del protocolo Coffee Value Assessment para la caracterización precisa de perfiles diferenciados de exportación.</p>
-                    </div>
-                </article>
-            </li>
 
-        </ul>
+                    <h5 class="card-title text-primary fw-semibold mb-2">
+                        Rational design of technologies for the mitigation of neo-formed contaminants in roasted coffee
+                    </h5>
+
+                    <p class="card-subtitle text-muted fs-7 mb-3">
+                        <i class="bi bi-people-fill me-1"></i> Barrios-Rodríguez, Gutiérrez-Guzmán y colaboradores
+                    </p>
+
+                    <p class="card-text text-secondary text-truncate-3 flex-grow-1">
+                        Revisión de estrategias para mitigar contaminantes neoformados durante el tostado del café, conservando sus compuestos bioactivos y características sensoriales.
+                    </p>
+
+                    <div class="mt-3 pt-3 border-top d-flex justify-content-end align-items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=es&amp;user=dsRbeDQAAAAJ&amp;citation_for_view=dsRbeDQAAAAJ:lSLTfruPkqcC" target="_blank" rel="noopener" class="btn btn-sm btn-danger">
+                            <i class="bi bi-journal-bookmark me-1"></i> Ver artículo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
 </section>
-    
 
-
-       
-        <!-- ALIANZAS Y REDES (trasladado desde el footer al cuerpo de la página) -->
+        <!-- SECCIÓN: ALIANZAS Y REDES -->
         <section id="alianzas" class="section-padding alliances-section">
             <div class="section-header center-text">
                 <span class="eyebrow-text">Cooperación</span>
@@ -727,54 +837,66 @@
             </div>
         </section>
 
-  <!-- SECCIÓN DE CONTACTO -->
-<!-- SECCIÓN DE CONTACTO -->
+        <!-- SECCIÓN: CONTACTO -->
+       <!-- SECCIÓN: CONTACTO -->
 <section id="contacto" class="section-padding contact-section">
-    <div class="contact-wrapper">
-        
-        <div class="section-header center-text">
-            <span class="eyebrow-text">Atención al Ciudadano</span>
-            <h2>Contacto</h2>
-            <p class="section-subtitle">Déjanos tu mensaje y nuestro equipo de investigadores se pondrá en contacto contigo.</p>
-        </div>
+    
+    <div class="section-header center-text">
+        <span class="eyebrow-text">Atención al Ciudadano</span>
+        <h2>Contacto</h2>
+        <p class="contact-intro-text">Déjanos tu mensaje y nuestro equipo de investigadores se pondrá en contacto contigo.</p>
+    </div>
 
-        <!-- Formulario de contacto centrado -->
-        <div class="contact-form-card">
-            <p class="form-legend-note">Los campos marcados con <span class="required-flag" aria-hidden="true">*</span> son obligatorios.</p>
-            
-            <form action="https://wa.me/" method="get" target="_blank" class="contact-form-group">
+    <!-- Contenedor centrado y de ancho controlado -->
+    <div class="contact-layout">
+        
+        <div class="contact-left-col">
+            <div class="contact-form-card">
+                <p class="form-legend-note">
+                    Los campos marcados con <span class="required-flag" aria-hidden="true">*</span> son obligatorios.
+                </p>
                 
-                <!-- Fila doble para escritorio: Nombre y Contacto lado a lado -->
-                <div class="form-row-two-col">
-                    <div class="form-field">
-                        <label for="contact-name">Nombre completo <span class="required-flag" aria-hidden="true">*</span></label>
+                <form action="https://wa.me/" method="get" target="_blank">
+                    
+                    <div class="contact-form-group">
+                        <label for="contact-name">
+                            Nombre completo <span class="required-flag" aria-hidden="true">*</span>
+                        </label>
                         <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo" required aria-required="true">
                     </div>
 
-                    <div class="form-field">
-                        <label for="contact-info">Correo o teléfono <span class="required-flag" aria-hidden="true">*</span></label>
+                    <div class="contact-form-group">
+                        <label for="contact-info">
+                            Correo o teléfono <span class="required-flag" aria-hidden="true">*</span>
+                        </label>
                         <input type="text" id="contact-info" name="contact" placeholder="Ej. correo@ejemplo.com o 3001234567" required aria-required="true">
                     </div>
-                </div>
 
-                <div class="form-field">
-                    <label for="contact-message">Asunto, causa o mensaje <span class="required-flag" aria-hidden="true">*</span></label>
-                    <textarea id="contact-message" name="message" rows="4" placeholder="Escribe el motivo de tu consulta o PQRSD..." required aria-required="true"></textarea>
-                </div>
+                    <div class="contact-form-group">
+                        <label for="contact-message">
+                            Asunto, causa o mensaje <span class="required-flag" aria-hidden="true">*</span>
+                        </label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Escribe el motivo de tu consulta o PQRSD..." required aria-required="true"></textarea>
+                    </div>
 
-                <button type="submit" class="contact-submit">
-                    <span>Enviar mensaje</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                </button>
-            </form>
+                    <button type="submit" class="contact-submit">
+                        <span>Enviar mensaje</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
         </div>
 
     </div>
 </section>
-    <!-- FOOTER -->
+
+    </main>
+
+    <!-- PIE DE PÁGINA / FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -812,6 +934,7 @@
         </div>
     </footer>
 
+    <!-- MODAL GENÉRICO DE DETALLES -->
     <div class="modal" id="card-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" hidden>
         <div class="modal-content">
             <button class="modal-close" type="button" aria-label="Cerrar ventana">&times;</button>
@@ -821,6 +944,9 @@
             <a class="modal-link" id="modal-link" href="https://www.usco.edu.co/" target="_blank" rel="noopener">Visitar página</a>
         </div>
     </div>
+
+    <!-- SCRIPTS Y LÓGICA JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         // MENÚ FLOTANTE (panel lateral off-canvas)
@@ -940,7 +1066,7 @@
         document.querySelector('.carousel-control-prev').addEventListener('click', () => showSlide(currentSlide - 1));
         document.querySelector('.carousel-control-next').addEventListener('click', () => showSlide(currentSlide + 1));
         dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
-        // El auto-avance se detiene si el usuario prefiere menos movimiento (WCAG 2.2.2)
+
         if (!prefersReducedMotion) {
             setInterval(() => showSlide(currentSlide + 1), 5000);
         }
@@ -1102,11 +1228,12 @@
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !alliancePopover.hidden) closeAlliancePopover();
         });
-
     </script>
 
+    <!-- LIBRERÍAS EXTERNAS PARA CARRUSEL SPLIDE -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const splide = new Splide('#testimonials-carousel', {
@@ -1131,8 +1258,7 @@
 
             splide.mount(window.splide.Extensions);
         });
-    </script>
-    <script>
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.toggle-expand-btn').forEach((button) => {
                 button.setAttribute('aria-expanded', 'false');
